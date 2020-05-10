@@ -5,8 +5,28 @@ header {
   background-size: cover;
 }
 
-h2 {
+header .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 15px;
+}
+
+header .wrap h5 {
+  margin: 60px 0px;
+}
+
+.container {
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
+h2, h5 {
   color: white;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -15,10 +35,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   height: 35px;
-}
-
-.container {
-  max-width: 320px;
-  margin: 0 auto;
+  width: 195px;
+  margin: 45px 0px;
 }
 /*# sourceMappingURL=style.css.map */
