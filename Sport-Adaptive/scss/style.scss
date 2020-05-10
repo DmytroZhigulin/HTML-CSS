@@ -1,3 +1,24 @@
-body {
-    background-color: blue;
+header {
+    background-image: url(../img/football.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h2 {
+    color: white;
+}
+
+.logo {
+    display: block;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35px;
+
+}
+
+.container {
+    max-width: 320px;
+    margin: 0 auto;
 }
