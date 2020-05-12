@@ -30,7 +30,7 @@ a {
 
 .logo {
   display: block;
-  background-image: url(/img/LOGO.png);
+  background-image: url(../img/LOGO.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -111,21 +111,21 @@ a {
 }
 
 .banHeader .features .feaPic {
-  background-image: url(/img/head-icon1.png);
+  background-image: url(../img/head-icon1.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
 }
 
 .banHeader .features .feaPic__two {
-  background-image: url(/img/head-icon2.png);
+  background-image: url(../img/head-icon2.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
 }
 
 .banHeader .features .feaPic__three {
-  background-image: url(/img/head-icon3.png);
+  background-image: url(../img/head-icon3.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
@@ -170,7 +170,7 @@ a {
 }
 
 .AboutUs .AbUsPic {
-  background-image: url(/img/aboutUs_photo.png);
+  background-image: url(../img/aboutUs_photo.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 700px;
