@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap');
+@import 'vars.scss';
+
+body {
+    font-family: 'Poppins', sans-serif, 'Libre Baskerville', serif;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.navHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+.logo {
+    display: block;
+    background-image: url(/img/LOGO.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 97px;
+    height: 27px;
+}
+
+
+
+.mainMenu {
+    display: flex;
+    align-items: center; 
+
+    :nth-child(9) {
+        margin-right: 0px;
+    }
+
+    :hover {
+        border-bottom: 2px solid red;
+        transition: 0.5s;
+    }
+    :hover span {
+        color: red;
+        transition: 0.5s;
+    }
+
+    a {
+        color: var(--menu-text-color);
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 20px;
+        border-bottom: 2px solid transparent;
+
+        .alwaysRed {
+        color: red;
+        }  
+    }
+}
+
+
+
+
+.banHeader {
+    background-color: rgba(38, 39, 50, 0.85);
+    text-align: center;
+
+    .banTitle {
+        width: 818px;
+        color: #ffffff;
+        font-family: "Libre Baskerville";
+        font-size: 60px;
+        font-weight: 400;
+        padding-top: 175px;
+        margin: 0 auto;
+    }
+
+    .features {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 198px 176px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        h4 {
+            padding-top: 35px;
+        }
+        .feaPic {
+            background-image: url(/img/head-icon1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 40px;
+
+            &__two {
+                background-image: url(/img/head-icon2.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 40px;
+                
+            }
+
+            &__three {
+                background-image: url(/img/head-icon3.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 40px;
+                
+            }
+        }
+
+    
+        .feaTitle {
+            color: #38c695;
+        
+            &__two {
+                color: #b27cf5;
+                padding-top: 35px;
+            }
+
+            &__three {
+                color: #feb960;
+            }   
+        }
+    }
+}
+
+
+.button {
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #fc5f45;
+    border: none;
+    margin-top: 45px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    
+    p{
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+.AboutUs {
+    margin: 150px 0px;
+    display: flex;
+
+    .AbUsPic {
+        background-image: url(/img/aboutUs_photo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 700px;
+        width: 50%;
+        z-index: 1;
+        position: relative;   
+    }
+
+    .aboutBlock {
+        padding: 75px 0px;
+        width: 50%;
+        z-index: 2;
+        position: relative;   
+        background-color: #ffffff;
+
+    }
+}
+
+
