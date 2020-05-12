@@ -1,41 +1,205 @@
-header {
-  background-image: url(../img/football.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-header .wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0px 15px;
-}
-
-header .wrap h5 {
-  margin: 60px 0px;
-}
-
 .container {
-  max-width: 1560px;
-  margin: 0 auto;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.content_container {
+    max-width: 1414px;
+    margin: 0 auto;
 }
 
-h2, h5 {
-  color: white;
-  text-transform: uppercase;
+/* HEADER */
+.header {
+    background-image: url(../img/football.jpg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.gradient {
+    height: 100%;
+    width: 100%;
+    background-color: #0a0e34;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+}
+.top_h {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 195px;
+    position: relative;
+}
+.logo  {
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    width: 189px;
+    height: 33px;   
+}
+.top_for {
+    color: #ffffff;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 34.49px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+.header_title {
+    color: #ffffff;
+    font-family: "Proxima Nova";
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 180px;
+    padding-top: 300px;
+}
+.ht_1 {
+    letter-spacing: 4.96px;
+}
+.ht_2 {
+    letter-spacing: 4.5px;
+    margin-left: 400px;
+}
+.main_menu {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    padding: 0 180px 170px;
+    position: relative;
+}
+.menu_title {
+    text-decoration: none;
+    color: #9071ea;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 34.49px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin: 0 35px;
+    cursor: pointer;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 110px;
+}
+.button {
+    width: 311px;
+    height: 77px;
+    border-radius: 50px;
+    box-shadow: 0 16px 24px #0a0e34;
+    background-color: #5e42b0;
+    margin: 0 20px;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.download {
+    color: #ffffff;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+.store {
+    color: #ffffff;
+    font-family: "Proxima Nova - Semibold";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 34.49px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+.button_discription {
+    padding: 15px 0px 0px 25px;
+}
+.bi {
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 39px;
+    margin-left: 40px;
+}
+.bl_a {
+    background-image: url(../img/Apple.png);
+}
+.bl_g {
+    background-image: url(../img/Google_Play.png);
+    margin-left: 60px;
+}
+/*Header END*/
+
+/*Athlets*/
+.athlets {
+    position: relative;
+}
+.section_title {
+    color: #e7e7e7;
+    font-family: "Proxima Nova";
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    padding-top: 110px;
+}
+.athlete {
+    background-image: url(../img/Athlets.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%
+}
+.gray {
+    height: 256px;
+    background-color: #5e42b0;
+    opacity: 0.06;
+}
+.blue {
+    height: 297px;
+    background-color: #5e42b0;
+
+}
+.a-text {
+    color: #000000;
+    font-family: "Proxima Nova";
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 30px 0;
+}
+.number_title {
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+}
+.number {   
+    color: #000000;
+    font-family: "Proxima Nova";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 34.49px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 4px solid #5e42b0;    
+}
+.n_title {
+    color: #c1c1c1;
+    font-family: "Proxima Nova";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34.49px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    margin-left: 10px;
 }
 
-.logo {
-  display: block;
-  background-image: url(../img/logo.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 35px;
-  width: 195px;
-  margin: 45px 0px;
+
+.players {
+    position: relative;
 }
-/*# sourceMappingURL=style.css.map */
