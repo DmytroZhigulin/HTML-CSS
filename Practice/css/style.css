@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Brandon Printed One';
+    src: url('../fonts/subset-BrandonPrinted-One.eot?#iefix') format('embedded-opentype');
+    src: url('../fonts/subset-BrandonPrinted-One.eot'),
+        url('../fonts/subset-BrandonPrinted-One.woff2') format('woff2'),
+        url('../fonts/subset-BrandonPrinted-One.woff') format('woff'),
+        url('../fonts/subset-BrandonPrinted-One.ttf') format('truetype'),
+        url('../fonts/subset-BrandonPrinted-One.svg#BrandonPrinted-One') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+/*                  BrandonPrinted-One.svg весит почти 1 мБ. Рационально ли его использовать???*/
+@font-face {
+    font-family: 'ArialMT';
+    src: url('../fonts/subset-ArialMT.eot');
+    src: url('../fonts/subset-ArialMT.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-ArialMT.woff2') format('woff2'),
+        url('../fonts/subset-ArialMT.woff') format('woff'),
+        url('../fonts/subset-ArialMT.ttf') format('truetype'),
+        url('../fonts/subset-ArialMT.svg#ArialMT') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'ArialMT';
+    background-color: #f0f2ea;
+}
+.center {
+    text-align: center;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    padding-top: 40px;
+}
+.logo {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 50%; 
+}
+.header_title {
+    color: #636758;
+    font-size: 14px;
+    margin-bottom: 44px; 
+}
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.main, .footer{
+    padding: 0 30px;
+}
+.title {
+    background-image: url(../img/sheeps.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.basic_title {
+    font-family: "Brandon Printed One";
+    font-size: 36px;
+    padding-top: 145px;
+    padding-bottom: 24px;
+    letter-spacing: 5px;
+}
+.title_line {
+    width: 100px;
+    border-bottom: 1px solid #fff;
+    margin: 0 auto;
+}
+.title_h3 {
+    padding-top: 24px;
+    padding-bottom: 167px;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+}
+.main_title {
+    margin-top: 49px;
+    margin-bottom: 39px;
+    letter-spacing: 1.4px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #484a43;
+}
+.article_1 {
+    float: left;
+    width: 255px;
+    margin-right: 30px;    
+}
+.article_1_img {
+    background-image: url(../img/article_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 19px;
+}
+.article_title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #6d7e44;
+    line-height: 22px;
+    margin-bottom: 12px;
+}
+.text {
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+    margin-bottom: 38px;
+}
+.article_2 {
+    float: right;
+    width: 255px;
+}
+.article_2_img {
+    background-image: url(../img/article_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 19px;
+}
+.article_link {
+    font-family: "Brandon Printed One";
+    font-size: 24px;
+    color: #fff;
+    margin: 66px 95px;
+    display: inline-block;
+    text-decoration: none;
+}
+.clearfix {
+    clear: both;
+}
+.article_3_img {
+    background-image: url(../img/article_3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 19px;
+}
+.article_link.big_img{
+    margin: 101px 235px;
+}
+.footer_line {
+    width: 100%;
+    height: 2px;
+    background-color: #e5e5e5;
+    margin-bottom: 39px;
+}
+.footer {
+    color: #333333;
+}
+.brand {
+    float: left;
+    width: 266px;   
+    margin-bottom: 40px; 
+}
+.brand_title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.contacts {
+    font-size: 11px;
+    line-height: 18px;
+}
+.website {
+    color: #6d7e44;
+    font-weight: 700;
+    text-decoration: none;
+}
+.footer_links {
+    float: right;
+}
+.social{
+    margin-right: 8px;    
+    text-decoration: none;
+}
+.social_block {
+    margin-bottom: 16px;
+}
+.links {
+    text-decoration: none;
+    color: #6d7e44;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 11px;
+    display: inline-block;
+}
+.unsubscribe {
+    margin-top: 40px;
+    color: #333333;
+    font-size: 11px;
+}
+.unsubscribe_link {
+    color: #333333;
+    margin-bottom: 40px;
+    display: inline-block;
+
+}
