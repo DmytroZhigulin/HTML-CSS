@@ -296,9 +296,12 @@ body {
     letter-spacing: -1px;
     padding-top: 65px;
 }
-.pricing_cards {
+
+.cards_wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.pricing_cards {
     position: absolute;
     width: 1010px;
 }
@@ -306,7 +309,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 318px;
+    width: 315px;
     background-color: #ffffff;
     color: #161616;
     font-family: 'PT Serif', serif;
@@ -516,3 +519,42 @@ footer {
     margin-bottom: 15px; 
 }
 /*end footer*/
+
+
+
+/* styles for 768px resolution */
+
+@media (max-device-width:1024px) {
+    
+    .container {
+        max-width: 868px;
+        margin: 0 auto;
+    }
+
+    .top_wrap {
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .main_menu {
+        margin-top: 20px;
+    }
+
+    .header_text {
+        margin: 0 auto;
+    }    
+    .header_main_text {
+        display: none;
+    }
+
+    .cards_wrap {
+        position: absolute;
+        display: flex;
+    }
+    .pricing_cards {
+        justify-content: space-around;
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+    }
+}
