@@ -9,6 +9,7 @@
 .content_container {
   max-width: 1414px;
   margin: 0 auto;
+  position: relative;
 }
 
 /* HEADER */
@@ -177,13 +178,8 @@
   margin-left: 60px;
 }
 
-/*Header END*/
-/*Athlets*/
-.athlets {
-  position: relative;
-}
 
-.section_title {
+.athlete_title {
   color: #e7e7e7;
   font-family: "Proxima Nova";
   font-size: 90px;
@@ -194,6 +190,17 @@
   margin-left: 55%;
 }
 
+.player_title {
+  color: #e7e7e7;
+  font-family: "Proxima Nova";
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 60px;
+  text-transform: uppercase;
+  padding-top: 110px;
+  margin-left: 5%;
+}
+
 .athlete {
   background-image: url(../img/Athlets.png);
   background-repeat: no-repeat;
@@ -201,6 +208,18 @@
   top: 40px;
   height: 100%;
   width: 100%;
+  padding-bottom: 600px;
+}
+
+.player {
+  background-image: url(../img/Players.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 550px;
+  top: -32px;
+  padding-bottom: 460px;
 }
 
 .gray {
@@ -211,6 +230,9 @@
 .blue {
   height: 297px;
   background-color: #5e42b0;
+}
+.bottom {
+  background-color: #0a0e34;
 }
 
 .a-text {
@@ -245,6 +267,10 @@
   border-bottom: 4px solid #5e42b0;
 }
 
+.blue .number {
+  border-bottom: 4px solid #efefef;
+}
+
 .n_title {
   color: #c1c1c1;
   font-family: "Proxima Nova";
@@ -256,7 +282,5 @@
   margin-left: 10px;
 }
 
-.players {
-  position: relative;
-}
+
 /*# sourceMappingURL=style.css.map */
