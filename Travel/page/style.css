@@ -197,25 +197,28 @@ body {
 .card_icon_1 {
     background-image: url(../picture/heart.png);
     background-repeat: no-repeat;
-    width: 163px;
+    background-position: center;
     height: 142px;
     margin-left: 5px;
 }
 .card_icon_2 {
     background-image: url(../picture/tools.png);
     background-repeat: no-repeat;
+    background-position: center;
     height: 137px;
     margin-left: 10px;
 }
 .card_icon_3 {
     background-image: url(../picture/lamp.png);
     background-repeat: no-repeat;
+    background-position: center;
     height: 155px;
     margin-left: 20px;
 }
 .card_icon_4 {
     background-image: url(../picture/compass.png);
     background-repeat: no-repeat;
+    background-position: center;
     height: 150px;
     margin-left: 10px;
 }
@@ -522,7 +525,7 @@ footer {
 
 
 
-/* styles for 768px resolution */
+/* styles for 1024px resolution */
 
 @media (max-device-width:1024px) {
     
@@ -540,6 +543,10 @@ footer {
         margin-top: 20px;
     }
 
+    .header_form {
+        display: none;
+    }
+
     .header_text {
         margin: 0 auto;
     }    
@@ -551,10 +558,77 @@ footer {
         position: absolute;
         display: flex;
     }
-    .pricing_cards {
-        justify-content: space-around;
-        position: relative;
-        margin: 0 auto;
-        display: flex;
+    .pricing {
+        position: static;
+        padding-bottom: 10px;
     }
+    .pricing_cards {
+        position: static;
+        width: auto;
+    }
+    .pricing_card {
+        width: 280px;
+    }
+    
+    .cards_wrap {
+        display: flex;
+        justify-content: space-between;
+        position: static;
+    }
+
+    .testimonial_gallery {
+        flex-direction: column;
+    }
+
+    .g_wrap {
+        width: auto;
+    }
+
+    .bottom {
+        margin-left: 45%;
+    }
+
+
+    /* styles for 790px resolution */
+}
+@media (max-device-width:790px) {
+
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .title_wrap {
+        margin-bottom: 50px;
+    }
+
+    .service_cards {
+        flex-wrap: wrap;
+    }
+
+    .card_s {
+        width: 45%;
+        margin-top: 20px;
+    }
+
+    .story_wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testeminial {
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    .footer {
+        display: none;
+    }
+    .rights {
+        margin: 0 auto;
+    }
+
+    
+
+
 }
