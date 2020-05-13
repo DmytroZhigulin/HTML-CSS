@@ -282,5 +282,15 @@
   margin-left: 10px;
 }
 
+.left {
+  margin-left: 5%;
+}
+.blue .a-text {
+  color: #ffffff;
+}
+.blue .number {
+  color: #9072e5;
+}
+
 
 /*# sourceMappingURL=style.css.map */
