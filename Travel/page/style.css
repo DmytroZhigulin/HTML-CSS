@@ -247,7 +247,7 @@ body {
     justify-content: baseline;
 }
   /*END services cards*/
-  
+
 /*END Services*/
 
 /*Story button*/  
@@ -748,6 +748,11 @@ footer {
         display: none;
     }
 
+
+
+
+    /* Burger menu style */
+
     .burger_menu_wrap {
         display: block;
         cursor: pointer;
@@ -760,6 +765,16 @@ footer {
         background-color: black;
         height: 3px;
         position: relative;
+        list-style: none;
+
+    }
+
+    .menu_wrap {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 32px;
+        right: -16px;
     }
 
     
@@ -784,6 +799,29 @@ footer {
     .form_button {
         width: 240px;
     }
+    .form_button:hover {
+        transition: 0.5s;
+    }
+
+    .main_link {
+        width: 100%;
+        display: inline-block;
+        color: white;
+        border-bottom: 1px solid #d03958;
+        padding: 0;
+    }
+
+    .main_link:hover {
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+
+    .burger_menuClose {
+        display: none;
+    }
+
+    
 }
 
 
