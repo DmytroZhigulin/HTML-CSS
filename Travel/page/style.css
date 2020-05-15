@@ -548,12 +548,11 @@ footer {
 @media (max-device-width:1024px) {
     
     .container {
-        max-width: 868px;
+        max-width: 90%;
         margin: 0 auto;
     }
 
     .top_wrap {
-        flex-direction: column;
         margin-bottom: 100px;
     }
 
@@ -598,6 +597,7 @@ footer {
     }
     .pricing_card {
         width: 280px;
+        margin-top: 20px;
     }
     
     .cards_wrap {
@@ -619,6 +619,82 @@ footer {
     }
 
 
+
+          /* Burger menu style */
+
+          .main_menu {
+            display: none;
+        }
+
+        .burger_menu_wrap {
+            display: block;
+            cursor: pointer;
+            padding: 15px 0px;
+            margin-top: 25px;
+        }
+        
+        .burger_menu {
+            width: 25px;
+            background-color: black;
+            height: 3px;
+            position: relative;
+            list-style: none;
+
+        }
+
+        .menu_wrap {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 32px;
+            right: -16px;
+        }
+
+        
+        .burger_menu::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            width: 25px;
+            background-color: black;
+            height: 3px;
+        }
+        
+        .burger_menu::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            width: 25px;
+            background-color: black;
+            height: 3px;
+        } 
+
+        .form_button {
+            width: 240px;
+        }
+        .form_button:hover {
+            transition: 0.5s;
+        }
+
+        .main_link {
+            width: 100%;
+            display: inline-block;
+            color: white;
+            border-bottom: 1px solid #d03958;
+            padding: 0;
+        }
+
+        .main_link:hover {
+            background-color: transparent;
+            border-radius: 0;
+        }
+
+
+        .burger_menuClose {
+            display: none;
+        }
+
+
     /* styles for 890px resolution */
 }
 @media (max-device-width:890px) {
@@ -637,8 +713,9 @@ footer {
     }
 
     .card_s {
-        width: 45%;
+        width: auto;
         margin-top: 20px;
+        margin: 0 auto;
     }
 
     .pricing_card {
@@ -722,14 +799,7 @@ footer {
         max-width: 90%;
         margin: 0 auto;
     }
-
-    .top_wrap {
-        flex-direction: row;
-    }
-    .main_menu {
-        display: none;
-    }
-
+    
     .title_wrap {
         font-size: 40px;
     }
@@ -745,79 +815,6 @@ footer {
         display: none;
     }
     .ava-2 {
-        display: none;
-    }
-
-
-
-
-    /* Burger menu style */
-
-    .burger_menu_wrap {
-        display: block;
-        cursor: pointer;
-        padding: 15px 0px;
-        margin-top: 25px;
-    }
-    
-    .burger_menu {
-        width: 25px;
-        background-color: black;
-        height: 3px;
-        position: relative;
-        list-style: none;
-
-    }
-
-    .menu_wrap {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 32px;
-        right: -16px;
-    }
-
-    
-    .burger_menu::before {
-        content: '';
-        position: absolute;
-        top: -10px;
-        width: 25px;
-        background-color: black;
-        height: 3px;
-    }
-    
-     .burger_menu::after {
-        content: '';
-        position: absolute;
-        top: 10px;
-        width: 25px;
-        background-color: black;
-        height: 3px;
-    } 
-
-    .form_button {
-        width: 240px;
-    }
-    .form_button:hover {
-        transition: 0.5s;
-    }
-
-    .main_link {
-        width: 100%;
-        display: inline-block;
-        color: white;
-        border-bottom: 1px solid #d03958;
-        padding: 0;
-    }
-
-    .main_link:hover {
-        background-color: transparent;
-        border-radius: 0;
-    }
-
-
-    .burger_menuClose {
         display: none;
     }
 
