@@ -14,10 +14,6 @@ a {
   margin: 0 auto;
 }
 
-.clearfix {
-  clear: both;
-}
-
 /*--------Тень на карточках с работами---------------*/
 .shadow {
   width: 100%;
@@ -150,9 +146,14 @@ a {
 }
 
 .header_top {
-  display: inline-block;
-  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 40px;
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .name {

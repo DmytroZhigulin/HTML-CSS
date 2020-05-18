@@ -12,9 +12,7 @@ a {
     max-width: 1140px;
     margin: 0 auto;
 }
-.clearfix {
-    clear: both;
-}
+
 
 /*--------Тень на карточках с работами---------------*/
 .shadow {
@@ -147,9 +145,10 @@ a {
 }
 
 .header_top {
-    display: inline-block;
-    margin-top: 40px;
+    display: flex;
+    padding-top: 40px;
     position: relative;
+    justify-content: space-between;
 }
 
 .name {
