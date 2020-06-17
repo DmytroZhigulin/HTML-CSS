@@ -13,6 +13,42 @@
 
 
 
+
+    const startPlan = {
+        name: 'Starter',
+        monthPay: 'Free',
+        typeOfService: 'Free service',
+        accounts: 'Multiple accounts',
+        planManage: 'Management NO',
+        dataType: '--',
+        techSupp: '--',
+    };
+
+    const businessPlan = {
+        name: 'Business',
+        monthPay: '$97',
+        typeOfService: 'Free service',
+        accounts: 'Multiple accounts',
+        planManage: 'Limited management',
+        dataType: 'Limited Data',
+        techSupp: '',
+    };
+
+    const professionalPlan = {
+        name: 'Professional',
+        monthPay: '$297',
+        typeOfService: 'free service',
+        accounts: 'Multiple accounts',
+        planManage: 'Unlimited management ',
+        dataType: 'Unlimited data',
+        techSupp: 'Whatever You Need',
+    };
+
+
+    // console.log(startPlan);
+    // console.log(businessPlan);
+    // console.log(professionalPlan);
+
     //функция события 'клик' на основном меню
     function mainMenuFunc(menu) {
 
