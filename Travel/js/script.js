@@ -8,7 +8,7 @@
 
     // console.log(headerForm);
     // console.log(inputField);
-    console.log(formCheckbox);
+    // console.log(formCheckbox);
     // console.log(formButton);
 
 
@@ -56,6 +56,15 @@
                             alert("All fields must be filled");
                         }
                     });
+
+                    // for ( let field of inputField) {   
+                    //     if ( field.value != '' && field.value != null) {
+                    //         userInfo.push(field.value);
+                    //     } else {
+                    //         console.log(`err on ${field}`);
+                    //         alert("All fields must be filled");
+                    //     }
+                    // }
         
                 console.log(userInfo);
 
