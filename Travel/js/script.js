@@ -1,14 +1,14 @@
 "use strict";
 
     const mainMenu = document.querySelectorAll('.main_menu .main_link'),
-        headerForm = document.querySelector('.header_form'),
-        inputField = headerForm.querySelectorAll('.text_field'),
-        formCheckbox = headerForm.querySelector('[type="checkbox"]'),
-        formButton = headerForm.querySelector('.form_button');
+          headerForm = document.querySelector('.header_form'),
+          inputField = headerForm.querySelectorAll('.text_field'),
+          formCheckbox = headerForm.querySelector('[type="checkbox"]'),
+          formButton = headerForm.querySelector('.form_button');
 
     // console.log(headerForm);
     // console.log(inputField);
-    // console.log(formCheckbox);
+    console.log(formCheckbox);
     // console.log(formButton);
 
 
@@ -26,7 +26,7 @@
             });
         });
     }
-    mainMenuFunc(mainMenu);
+    // mainMenuFunc(mainMenu);
 
 
 
@@ -35,29 +35,34 @@
 
         formButton.addEventListener('click', () => {
 
-            console.log('form button clicked!');
-            let userInfo = [];
+            if (formCheckbox.checked === true) {
 
-            inputField.forEach((item, index) => {
+                console.log('checked');
 
-                // console.log(item);
+                console.log('form button clicked!');
+                let userInfo = [];
 
-                if ( item.value != '' && item.value != null) {
 
-                    userInfo.push(item.value);
-                    console.log(`done on ${index}`);
+                    inputField.forEach((item, index) => {
 
-                } else {
-                    console.log(`err on ${index}`);
-                    alert("All fields must be filled");
-                }
+                        // console.log(item);
+                        if ( item.value != '' && item.value != null) {
 
-            });
-    
-            console.log(userInfo);
+                            userInfo.push(item.value);
+                            console.log(`done on ${index}`);
 
+                        } else {
+                            console.log(`err on ${index}`);
+                            alert("All fields must be filled");
+                        }
+                    });
+        
+                console.log(userInfo);
+
+            } else {
+                alert('You must read and accept the terms & conditions');
+            }
         });
-
     }
     formCheck(headerForm);
 
