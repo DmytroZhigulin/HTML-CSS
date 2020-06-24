@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
           mainLink = mainmenu[0].querySelectorAll('.main_link'),
           headerForm = document.querySelector('form'),
           formField = headerForm.querySelectorAll('.form_part>.text'),
-          button = document.querySelectorAll('[type="button"]');
+          button = document.querySelectorAll('button');
 
 
           console.log(button);
@@ -28,7 +28,8 @@ window.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', (event) => {
 
             event.preventDefault();
-            console.log(`clicked ${item.className}`);
+            console.log(event.target.classList);
+            console.log(`clicked ${item}`);
 
         });
     });
