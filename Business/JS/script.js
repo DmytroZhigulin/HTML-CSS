@@ -23,6 +23,18 @@ window.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             console.log(`clicked ${index}`);
         });
+
+        item.addEventListener('mouseover', (e) => {
+    
+            item.classList.add('hovered');
+            
+        });
+
+        item.addEventListener('mouseout', () => {
+    
+            item.classList.remove('hovered');
+            
+        });
     });
 
 
