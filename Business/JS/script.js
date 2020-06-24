@@ -3,14 +3,18 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const mainmenu = document.querySelectorAll('.main_menu'),
-          mainLink = mainmenu[0].querySelectorAll('.main_link'),
-          headerForm = document.querySelector('form'),
-          formField = headerForm.querySelectorAll('.form_part>.text'),
-          button = document.querySelectorAll('button');
+    const mainMenu = document.querySelectorAll('.main_menu')[0], // меню хедера
+          footMenu = document.querySelectorAll('.main_menu')[1], // меню подвала
+          mainLink = mainMenu.querySelectorAll('.main_link'),// псевдомассив с пунктами меню хедера
+          footLink = footMenu.querySelectorAll('.footer_link'),// псевдомассив с пунктами меню подвала
+          headerForm = document.querySelector('form'),// форма хедера
+          formField = headerForm.querySelectorAll('.form_part>.text'),// поля формы хедера
+          button = document.querySelectorAll('button'); // псевдомассив с кнопками
 
 
           console.log(button);
+          console.log(mainLink);
+          console.log(footLink); 
           
           
     mainLink.forEach( (item, index) => {
