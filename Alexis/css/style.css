@@ -30,7 +30,7 @@ a {
 
 .logo {
   display: block;
-  background-image: url(../img/LOGO.png);
+  background-image: url(/img/LOGO.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -77,8 +77,26 @@ a {
 }
 
 .banHeader {
-  background-color: rgba(38, 39, 50, 0.85);
   text-align: center;
+  background-image: url(../img/hederBannerBG.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.banHeader .gradient {
+  background-color: rgba(38, 39, 50, 0.85);
+  z-index: 2;
+  opacity: 70%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.banHeader__wrap {
+  position: relative;
+  z-index: 2;
 }
 
 .banHeader .banTitle {
@@ -111,21 +129,21 @@ a {
 }
 
 .banHeader .features .feaPic {
-  background-image: url(../img/head-icon1.png);
+  background-image: url(/img/head-icon1.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
 }
 
 .banHeader .features .feaPic__two {
-  background-image: url(../img/head-icon2.png);
+  background-image: url(/img/head-icon2.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
 }
 
 .banHeader .features .feaPic__three {
-  background-image: url(../img/head-icon3.png);
+  background-image: url(/img/head-icon3.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
@@ -170,7 +188,7 @@ a {
 }
 
 .AboutUs .AbUsPic {
-  background-image: url(../img/aboutUs_photo.png);
+  background-image: url(/img/aboutUs_photo.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 700px;
