@@ -11,7 +11,59 @@ a {
 .container {
     max-width: 1140px;
     margin: 0 auto;
+
+    &__wrap{
+        position: relative;
+    }
 }
+
+.section{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+
+    &__styles{
+        text-align: center;
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    &__title{
+        font-family: 'Libre Baskerville', serif;
+        font-size: 50px;
+        font-weight: bold;
+        position: relative;
+        padding: 145px 0 25px 0;
+    }
+
+    &__num {
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        color: var(--section-num-color);
+        font-size: 273px;
+        font-weight: bold;
+        text-shadow: var(--num-shadow);
+        
+    }
+    &__num2 {
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        color: var(--section-num-color);
+        font-size: 273px;
+        font-weight: bold;
+        left: 120px;
+        top: -25px;
+        text-shadow: var(--num-shadow);
+    }
+    &__subTitle{
+        position: relative;
+        font-size: 18px;
+        color: #616161;
+        padding-bottom: 80px;
+        
+    }
+}
+
 
 
 .navHeader {
@@ -109,16 +161,16 @@ a {
         text-transform: uppercase;
 
         h4 {
-            padding-top: 35px;
+            padding-top: 25px;
         }
         .feaPic {
-            background-image: url(/img/head-icon1.png);
+            background-image: url(../img/head-icon1.png);
             background-repeat: no-repeat;
             background-position: center;
             height: 40px;
 
             &__two {
-                background-image: url(/img/head-icon2.png);
+                background-image: url(../img/head-icon2.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 height: 40px;
@@ -126,7 +178,7 @@ a {
             }
 
             &__three {
-                background-image: url(/img/head-icon3.png);
+                background-image: url(../img/head-icon3.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 height: 40px;
@@ -140,7 +192,6 @@ a {
         
             &__two {
                 color: #b27cf5;
-                padding-top: 35px;
             }
 
             &__three {
@@ -169,28 +220,152 @@ a {
     }
 }
 
+// ABOUT US BLOCK
 .AboutUs {
     margin: 150px 0px;
-    display: flex;
+    font-family: 'Libre Baskerville', serif;
 
     .AbUsPic {
-        background-image: url(/img/aboutUs_photo.png);
+        background-image: url(../img/aboutUsPic.jpg);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
         height: 700px;
-        width: 50%;
-        z-index: 1;
-        position: relative;   
+        width: 555px;
+        box-shadow: 1px 1px 10px;
+          
     }
 
     .aboutBlock {
-        padding: 75px 0px;
         width: 50%;
-        z-index: 2;
-        position: relative;   
+        position: absolute;
         background-color: #ffffff;
+        left: 500px;
+        top: 140px;
+        box-shadow: 1px 1px 10px;
 
+
+        &__wrap{
+            position: relative;
+        }
+        &__contentWrap {
+            position: relative;
+            padding: 0 82px;
+        }
+        &__title {
+            font-size: 50px;
+            font-weight: bold;
+            padding: 95px 0 50px 0;
+
+        }
+
+        &__lineGradient {
+            display: flex;
+            width: 100%;
+            height: 3px;
+
+            .red {
+                background-color: #fc5f45;
+                width: 25%;
+            }
+            .green {
+                background-color: #38c695;
+                width: 25%;
+            }
+            .purple {
+                background-color: #b27cf5;
+                width: 25%;
+            }
+            .orange {
+                background-color: #feb960;
+                width: 25%;
+            }
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            padding-bottom: 105px;
+        }
     }
+}
+
+
+.ourFocus {
+    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+
+    &__Cards {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 150px;
+    }
+    &__card {
+        max-width: 260px;
+        background-color: #ffffff;
+        text-align: center;
+        box-shadow: 10px 15px 5px #edebeb;
+
+        img {
+            padding-top: 60px;
+            height: 55px;
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 500;
+            padding: 30px 0;
+        }
+
+        &__text {
+            font-size: 15px;
+            color: #616161;
+            padding: 0 30px 65px;
+        }
+
+        &__line {
+            height: 2px;
+            background-color: #fc5f45;
+            
+            &__green {
+                background-color: #38c695;
+                height: 2px;
+            }
+            &__purple {
+                background-color: #b27cf5;;
+                height: 2px;
+            }
+            &__orange {
+                background-color: #feb960;
+                height: 2px;
+            }
+        }
+        
+    }
+
+
+}
+
+
+.videoSection {
+    background-color: #3f4049;
+}
+
+.portfolio {
+    font-family: 'Poppins', sans-serif;
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__card {
+        width: 360px;
+        height: 290px
+    }
+}
+.team {
+    background-color: #f7f7f7;
 }
 
 

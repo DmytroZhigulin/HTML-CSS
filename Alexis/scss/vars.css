@@ -1,4 +1,6 @@
 :root {
   --menu-text-color:  #272727;
+  --num-shadow: 1px 10px 5px gray;
+  --section-num-color: #f0f0f0;
 }
 /*# sourceMappingURL=vars.css.map */
