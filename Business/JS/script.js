@@ -9,36 +9,66 @@ window.addEventListener('DOMContentLoaded', () => {
           footLink = footMenu.querySelectorAll('.footer_link'),// псевдомассив с пунктами меню подвала
           headerForm = document.querySelector('form'),// форма хедера
           formField = headerForm.querySelectorAll('.form_part>.text'),// поля формы хедера
-          button = document.querySelectorAll('button'); // псевдомассив с кнопками
+          button = document.querySelectorAll('button'), // псевдомассив с кнопками
+          priceCards = document.querySelectorAll('.price_card');// псевдомассив с карточками PRICE
 
 
           console.log(button);
           console.log(mainLink);
           console.log(footLink); 
+          console.log(priceCards); 
           
-          
-    mainLink.forEach( (item, index) => {
+    // main menu function 
+    function mainMenuEvents() {
 
-        item.addEventListener('click', (event) => {
-            event.preventDefault();
-            console.log(`clicked ${index}`);
-        });
+        mainLink.forEach( (item, index) => {
 
-        item.addEventListener('mouseover', (e) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+                console.log(`clicked ${index}`);
+            });
     
-            item.classList.add('hovered');
-            
-        });
-
-        item.addEventListener('mouseout', () => {
+            item.addEventListener('mouseover', () => {
+        
+                item.classList.add('hovered');
+                
+            });
     
-            item.classList.remove('hovered');
-            
+            item.addEventListener('mouseout', () => {
+        
+                item.classList.remove('hovered');
+                
+            });
         });
-    });
-
-
+    }
+    mainMenuEvents();      
     
+
+
+
+    // анимация карточек price
+    function priceCardsEvents() {
+
+        priceCards.forEach( item => {
+
+            item.addEventListener('mouseover', () => {
+        
+                item.classList.add('priceActive');
+                
+            });
+    
+            item.addEventListener('mouseout', () => {
+        
+                item.classList.remove('priceActive');
+                
+            });
+        });
+    }
+    priceCardsEvents();
+    
+
+
+    // тут будет функция по работе с кнопками страницы
     button.forEach( item => {
 
         item.addEventListener('click', (event) => {

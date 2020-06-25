@@ -352,16 +352,7 @@ header {
     width: 280px;
     margin-right: 5px;
 }
-.price_card:hover {
-    background-color: #709dca;
-    color: white; 
-    transform: scale(1.1);
-    transition: 0.5s;
-    cursor: pointer;
-}
-.price_card:hover .price_value {
-    color: white;
-}
+
 .price_plan {
     font-size: 25px;
     line-height: 22px;
@@ -706,6 +697,21 @@ span {
 .hovered {
     background-color: #ffbb42;
     color:white;
-    transition: 0.6s;
+    transition: 0.2s;
     border-radius: 5px;
+}
+
+.priceActive {
+    background-color: #709dca;
+    color: white; 
+    /* transform: scale(1.1);
+    transition: 0.5s; */
+    cursor: pointer;
+    animation: cardMove 0.8s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cardMove {
+    from{ transform: scale(1.0); }
+    to{ transform: scale(1.2); }
 }
