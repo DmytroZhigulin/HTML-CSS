@@ -40,7 +40,7 @@ a {
   font-size: 50px;
   font-weight: bold;
   position: relative;
-  padding: 145px 0 25px 0;
+  padding: 130px 0 25px 0;
 }
 
 .section__num {
@@ -59,8 +59,9 @@ a {
   font-size: 273px;
   font-weight: bold;
   left: 120px;
-  top: -25px;
+  top: -50px;
   text-shadow: var(--num-shadow);
+  opacity: 70%;
 }
 
 .section__subTitle {
@@ -182,21 +183,21 @@ a {
 }
 
 .banHeader .features .feaPic {
-  background-image: url(../img/head-icon1.png);
+  background-image: url(../img/money.svg);
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
 }
 
 .banHeader .features .feaPic__two {
-  background-image: url(../img/head-icon2.png);
+  background-image: url(../img/time.svg);
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
 }
 
 .banHeader .features .feaPic__three {
-  background-image: url(../img/head-icon3.png);
+  background-image: url(../img/satisfaction.svg);
   background-repeat: no-repeat;
   background-position: center;
   height: 40px;
@@ -235,6 +236,7 @@ a {
 .AboutUs {
   margin: 150px 0px;
   font-family: 'Libre Baskerville', serif;
+  position: relative;
 }
 
 .AboutUs .AbUsPic {
@@ -246,6 +248,29 @@ a {
   width: 555px;
   -webkit-box-shadow: 1px 1px 10px;
           box-shadow: 1px 1px 10px;
+}
+
+.AboutUs .AbUsPic::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fc5f45;
+  left: 115px;
+  top: 260px;
+  z-index: -1;
+}
+
+.AboutUs .AbUsPic::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #b27cf5;
+  z-index: -1;
+  rotate: 90deg;
+  top: 280px;
+  left: -178px;
 }
 
 .AboutUs .aboutBlock {
@@ -322,6 +347,18 @@ a {
   padding-bottom: 150px;
 }
 
+.ourFocus__Cards :nth-of-type(2) {
+  border-bottom: 2px solid #38c695;
+}
+
+.ourFocus__Cards :nth-of-type(3) {
+  border-bottom: 2px solid #b27cf5;
+}
+
+.ourFocus__Cards :nth-of-type(4) {
+  border-bottom: 2px solid #feb960;
+}
+
 .ourFocus__card {
   max-width: 260px;
   background-color: #ffffff;
@@ -367,8 +404,39 @@ a {
   height: 2px;
 }
 
+.ourFocus__card:first-child {
+  border-bottom: 2px solid #fc5f45;
+}
+
 .videoSection {
   background-color: #3f4049;
+  background-image: url(../img/videoSectionLayout.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+.videoSection__title {
+  padding: 150px 0px 40px;
+  font-size: 30px;
+}
+
+.videoSection__descr {
+  padding: 40px 0px 150px;
+  font-size: 15px;
+}
+
+.videoSection__pic {
+  background-image: url(../img/play.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .portfolio {
@@ -384,14 +452,142 @@ a {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 160px;
+}
+
+.portfolio__cards .one {
+  background-image: url(../img/portfolio1.png);
+}
+
+.portfolio__cards .two {
+  background-image: url(../img/portfolio2.png);
+}
+
+.portfolio__cards .three {
+  background-image: url(../img/portfolio3.png);
+}
+
+.portfolio__cards .four {
+  background-image: url(../img/portfolio4.png);
+}
+
+.portfolio__cards .five {
+  background-image: url(../img/portfolio5.png);
+}
+
+.portfolio__cards .six {
+  background-image: url(../img/portfolio6.png);
+}
+
+.portfolio__cards .seven {
+  background-image: url(../img/portfolio7.png);
+}
+
+.portfolio__cards .eight {
+  background-image: url(../img/portfolio8.png);
+}
+
+.portfolio__cards .nine {
+  background-image: url(../img/portfolio9.png);
 }
 
 .portfolio__card {
   width: 360px;
   height: 290px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 .team {
   background-color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+}
+
+.team .team__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.team .team__cards__card:first-of-type {
+  border-bottom: 2px solid #fc5f45;
+}
+
+.team .team__cards :nth-of-type(2) {
+  border-bottom: 2px solid #38c695;
+}
+
+.team .team__cards :nth-of-type(3) {
+  border-bottom: 2px solid #b27cf5;
+}
+
+.team .team__cards :nth-of-type(4) {
+  border-bottom: 2px solid #feb960;
+}
+
+.team .team__cards__employee__name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.team .team__cards__employee__name :first-child {
+  color: #fc5f45;
+}
+
+.team .team__cards .employee__position {
+  font-size: 13px;
+}
+
+.statistic_section {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(../img/statisticBanner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.statistic_section__gradient {
+  background-color: #342e34;
+  opacity: 50%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.statistic_section__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: 150px 20px;
+}
+
+.statistic_section__card {
+  text-align: center;
+  font-weight: 500;
+}
+
+.statistic_section__card__title {
+  margin: 35px 0px;
+  font-size: 20px;
+  color: #edebeb;
+}
+
+.statistic_section__card__sub {
+  font-size: 15px;
+  color: #bebec0;
+  padding-bottom: 40px;
 }
 /*# sourceMappingURL=style.css.map */

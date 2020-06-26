@@ -33,7 +33,7 @@ a {
         font-size: 50px;
         font-weight: bold;
         position: relative;
-        padding: 145px 0 25px 0;
+        padding: 130px 0 25px 0;
     }
 
     &__num {
@@ -52,8 +52,9 @@ a {
         font-size: 273px;
         font-weight: bold;
         left: 120px;
-        top: -25px;
+        top: -50px;
         text-shadow: var(--num-shadow);
+        opacity: 70%;
     }
     &__subTitle{
         position: relative;
@@ -164,13 +165,13 @@ a {
             padding-top: 25px;
         }
         .feaPic {
-            background-image: url(../img/head-icon1.png);
+            background-image: url(../img/money.svg);
             background-repeat: no-repeat;
             background-position: center;
             height: 40px;
 
             &__two {
-                background-image: url(../img/head-icon2.png);
+                background-image: url(../img/time.svg);
                 background-repeat: no-repeat;
                 background-position: center;
                 height: 40px;
@@ -178,7 +179,7 @@ a {
             }
 
             &__three {
-                background-image: url(../img/head-icon3.png);
+                background-image: url(../img/satisfaction.svg);
                 background-repeat: no-repeat;
                 background-position: center;
                 height: 40px;
@@ -224,6 +225,7 @@ a {
 .AboutUs {
     margin: 150px 0px;
     font-family: 'Libre Baskerville', serif;
+    position: relative;
 
     .AbUsPic {
         background-image: url(../img/aboutUsPic.jpg);
@@ -233,6 +235,28 @@ a {
         height: 700px;
         width: 555px;
         box-shadow: 1px 1px 10px;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #fc5f45;
+            left: 115px;
+            top: 260px;
+            z-index: -1;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #b27cf5;
+            z-index: -1;
+            rotate: 90deg;
+            top: 280px;
+            left: -178px;
+        }
           
     }
 
@@ -291,6 +315,9 @@ a {
 }
 
 
+
+
+// ------OUR FOCUS
 .ourFocus {
     background-color: #f7f7f7;
     font-family: 'Poppins', sans-serif;
@@ -299,12 +326,25 @@ a {
         display: flex;
         justify-content: space-between;
         padding-bottom: 150px;
+
+
+        :nth-of-type(2) {
+            border-bottom: 2px solid #38c695;
+        }
+        :nth-of-type(3) {
+            border-bottom: 2px solid #b27cf5;
+        }
+        :nth-of-type(4) {
+            border-bottom: 2px solid #feb960;
+        }
+
     }
     &__card {
         max-width: 260px;
         background-color: #ffffff;
         text-align: center;
         box-shadow: 10px 15px 5px #edebeb;
+        
 
         img {
             padding-top: 60px;
@@ -332,7 +372,7 @@ a {
                 height: 2px;
             }
             &__purple {
-                background-color: #b27cf5;;
+                background-color: #b27cf5;
                 height: 2px;
             }
             &__orange {
@@ -342,15 +382,50 @@ a {
         }
         
     }
-
-
+    &__card:first-child {
+        border-bottom: 2px solid #fc5f45;
+    }
 }
 
 
+
+
+// ------BANNER FIRST( VIDEO SECTION)
 .videoSection {
     background-color: #3f4049;
+    background-image: url(../img/videoSectionLayout.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+
+    &__title {
+        padding: 150px 0px 40px;
+        font-size: 30px;
+    }
+    &__descr {
+        padding: 40px 0px 150px;
+        font-size: 15px;
+    }
+    &__pic {
+        background-image: url(../img/play.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;  
+        cursor: pointer;
+    }
+      
+        
+          
 }
 
+
+
+// ------PORTFOLIO
 .portfolio {
     font-family: 'Poppins', sans-serif;
 
@@ -358,14 +433,142 @@ a {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-bottom: 160px;
+
+        .one{
+            background-image: url(../img/portfolio1.png);
+        }
+        .two{
+            background-image: url(../img/portfolio2.png);
+        }
+        .three{
+            background-image: url(../img/portfolio3.png);
+        }
+        .four{
+            background-image: url(../img/portfolio4.png);
+        }
+        .five{
+            background-image: url(../img/portfolio5.png);
+        }
+        .six{
+            background-image: url(../img/portfolio6.png);
+        }
+        .seven{
+            background-image: url(../img/portfolio7.png);
+        }
+        .eight{
+            background-image: url(../img/portfolio8.png);
+        }
+        .nine{
+            background-image: url(../img/portfolio9.png);
+        }
     }
     &__card {
         width: 360px;
-        height: 290px
+        height: 290px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 25px;
+        cursor: pointer;
+
     }
 }
+
+
+
+// ------TEAM
 .team {
     background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+
+    
+
+    .team__cards {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding-bottom: 50px;
+
+        &__card:first-of-type{
+            border-bottom: 2px solid #fc5f45; 
+        }
+        :nth-of-type(2) {
+            border-bottom: 2px solid #38c695;
+        }
+        :nth-of-type(3) {
+            border-bottom: 2px solid #b27cf5;
+        }
+        :nth-of-type(4) {
+            border-bottom: 2px solid #feb960;
+        }
+        
+        &__employee__name {
+            font-size: 18px;
+            font-weight: 500;
+
+            :first-child{
+                color: #fc5f45;
+            }
+        }
+        .employee__position{
+            font-size: 13px;
+        }
+        
+    }      
+        
 }
+
+
+
+
+//-----------BANNER SECOND
+
+.statistic_section {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/statisticBanner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &__gradient {
+        background-color: #342e34;
+        opacity: 50%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 150px 20px;
+    }
+    &__card {
+        text-align: center;
+        font-weight: 500;
+
+        &__title {
+            margin: 35px 0px;
+            font-size: 20px;
+            color: #edebeb;
+        }
+        &__sub {
+            font-size: 15px;
+            color: #bebec0;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+
+
+// ---------WORK STEPS
+    
+
+
 
 
