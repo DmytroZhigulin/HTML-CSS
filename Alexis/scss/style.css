@@ -215,7 +215,7 @@ a {
   color: #feb960;
 }
 
-.button {
+.banHeader .button {
   width: 180px;
   height: 50px;
   border-radius: 25px;
@@ -226,7 +226,7 @@ a {
   cursor: pointer;
 }
 
-.button p {
+.banHeader .button p {
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
@@ -365,6 +365,7 @@ a {
   text-align: center;
   -webkit-box-shadow: 10px 15px 5px #edebeb;
           box-shadow: 10px 15px 5px #edebeb;
+  cursor: pointer;
 }
 
 .ourFocus__card img {
@@ -501,6 +502,13 @@ a {
   cursor: pointer;
 }
 
+.portfolio__card__hover {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 230px;
+  height: 60px;
+}
+
 .team {
   background-color: #f7f7f7;
   font-family: 'Poppins', sans-serif;
@@ -589,5 +597,35 @@ a {
   font-size: 15px;
   color: #bebec0;
   padding-bottom: 40px;
+}
+
+.onHover {
+  cursor: pointer;
+  -webkit-animation: cardHover 1s;
+          animation: cardHover 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes cardHover {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes cardHover {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -15,8 +15,9 @@ window.addEventListener('DOMContentLoaded', () => {
         console.log(mainMenu);
         console.log(btn);
         console.log(focusCards);
-        console.log(portfolioCards);
         console.log(playBtn);
+        console.log(portfolioCards);
+        
 
 
         mainMenu.forEach( item => {
@@ -34,6 +35,35 @@ window.addEventListener('DOMContentLoaded', () => {
         playBtn.addEventListener('click', (event) => {
             console.log('Running video');
         });
+
+
+        function cardsOnHover() {
+
+            focusCards.forEach( item => {
+
+                item.addEventListener('mouseover', (event) => {
+                    item.classList.add('onHover');
+                });
+                item.addEventListener('mouseout', (event) => {
+                    item.classList.remove('onHover');
+                });
+            });
+
+
+            portfolioCards.forEach( item => {
+
+                item.addEventListener('mouseover', (event) => {
+
+                    item.classList.add('onHover');
+                });
+                item.addEventListener('mouseout', (event) => {
+                    
+                    item.classList.remove('onHover');
+                    
+                });
+            });
+        }
+        cardsOnHover();
 
 
 
