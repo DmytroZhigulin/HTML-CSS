@@ -560,6 +560,173 @@ a {
 }
 
 // ---------WORK STEPS
+.workSteps_wrap {
+    font-family: 'Poppins', sans-serif;
+    max-width: 556px;
+    margin: 0 auto;
+    padding: 50px 0px 150px;
+
+    &__understanding {
+        background-image: url(../img/projectA.jpg);
+        height: 300px;
+        position: relative;
+    }
+    &__planing {
+        background-image: url(../img/research.jpg);
+        height: 300px;
+        position: relative;
+    }
+    &__design {
+        background-image: url(../img/trebuetsa.jpg);
+        height: 300px;
+        position: relative;
+    }
+    &__develop {
+        background-image: url(../img/develop.jpeg);
+        height: 300px;
+        position: relative;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        background-color: #fff;
+        left: -300px;
+        top: -85px;
+        box-shadow: -2px 0px 6px gray;
+        border-bottom: 3px solid #fc5f45;
+
+        &.g {
+            border-bottom: 3px solid #b27cf5;
+        }
+
+        &.right {
+            left: 400px;
+            top: -100px;
+            border-bottom: 3px solid #38c695; 
+            box-shadow: 4px 0px 6px gray;
+
+            &.o {
+                border-bottom: 3px solid #feb960; 
+            }
+        }
+
+        .num {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: #e0e0e0;
+            padding: 40px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: #e0e0e0;
+                height: 2px;
+                width: 80%;
+                transform: rotateZ(130deg);
+                left: 30px;
+                top: 80px;
+            }
+        }
+
+        .card__wrap {
+            margin: 75px 40px 75px 0px;
+            width: 280px;
+
+        }
+        .card__title {
+            font-size: 25px;
+        }
+        .card__discription {
+            font-size: 15px;
+            padding-top: 30px;
+        }
+    }
+
+    
+    
+
+    
+}
+
+// ---------PRICING
+.pricing {
+    background-color: #f7f7f7;
+
+    &__card {
+        border-top: 2px solid #38c695;
+        text-align: center;
+        max-width: 360px;
+
+        &:nth-of-type(2) {
+            border-top: 2px solid #fc5f45;
+        }
+        &:nth-of-type(3) {
+            border-top: 2px solid #b27cf5;
+        }
+
+        &__mainCircle {
+            height: 113px;
+            width: 113px;
+            border-radius: 50%;
+
+            &.green {
+                background-color: #38c695;
+            }
+            &.red {
+                background-color: #fc5f45;
+            }
+            &.purple {
+                background-color: #b27cf5;
+            }
+        }
+
+        &__secondaryCircle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin: 0 auto;
+            top: 4px;
+            position: relative;
+            color: white;
+
+            &.green {
+                background-color: #38c695;
+            }
+            &.red {
+                background-color: #fc5f45;
+            }
+            &.purple {
+                background-color: #b27cf5;
+            }
+
+            & h5 {
+                font-size: 25px;
+                font-weight: bold;
+                padding-top: 30px;
+            }
+        }
+    }
+
+    &__cards_wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-family: 'Poppins', sans-serif;
+    }
+    &__card__title {
+        font-size: 20px;
+        padding: 35px 0px;
+        font-weight: 500;
+    }
+}
+
+
+  
     
 
 
