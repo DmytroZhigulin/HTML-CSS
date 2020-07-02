@@ -9,6 +9,7 @@ body {
 }
 a {
     text-decoration: none;
+    margin-bottom: 5px;
 }
 .container {
     max-width: 1140px;
@@ -480,6 +481,7 @@ a {
 .team {
     background-color: #f7f7f7;
     font-family: 'Poppins', sans-serif;
+    padding-bottom: 150px;
 
     
 
@@ -488,7 +490,15 @@ a {
         justify-content: space-between;
         text-align: center;
         padding-bottom: 50px;
+        
 
+
+        &__card {
+            cursor: pointer;
+            background-color: #ffffff;
+            box-shadow: 1px 1px 5px  gray;
+            
+        }
         &__card:first-of-type{
             border-bottom: 2px solid #fc5f45; 
         }
@@ -505,18 +515,107 @@ a {
         &__employee__name {
             font-size: 18px;
             font-weight: 500;
+            padding-top: 20px;
 
             :first-child{
                 color: #fc5f45;
             }
         }
+
+        .employee__photo {
+            
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 270px;
+            width: 263px;
+
+            &.first {
+                background-image: url(../img/image1.png);
+            }
+            &.second {
+                background-image: url(../img/image2.png);
+            }
+            &.third {
+                background-image: url(../img/image3.png);
+            }
+            &.fourth {
+                background-image: url(../img/image4.png);
+            }
+        }
         .employee__position{
             font-size: 13px;
+            padding: 15px 0px 25px;
         }
         
-    }      
+    }
+    
+    .team_description_block {
+        display: flex;
+        flex-direction: column;
         
-}
+        // display: none;
+        .team_description {
+            
+            background-color: #fff;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 5px 1px 5px #767676;
+            
+            &__wrap {
+                display: flex;
+                justify-content: space-between;
+                padding: 75px 90px 70px;
+            }
+            &_text {
+                max-width: 652px;
+                
+                
+    
+                h3 {
+                    padding-bottom:25px;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+    
+            &__links {
+                display: flex;
+                flex-direction: column;
+                margin: 50px 0px 0px 30px;
+                font-size: 15px;
+                
+                a {
+                    color: #767676;
+                }
+
+                &::before {
+                    content: '';
+                    height: 2px;
+                    width: 100px;
+                    background-color: #efefef;
+                    transform: rotateZ(90deg);
+                    left: -85px;
+                    position: relative;
+                    top: 40px;
+                } 
+            }
+            img {
+                height: 38px;
+                margin: 70px 35px 0px 80px;
+            }
+            &.hide {
+                display: none;
+            }
+            &.show {
+                display: flex;
+            }       
+        }
+    }
+}      
+
 
 //-----------BANNER SECOND
 .statistic_section {
@@ -731,7 +830,7 @@ a {
 
 
 
-
+// -------ANIMATIONS
 .onHover {
     cursor: pointer;
     animation: cardHover 1s;
@@ -740,4 +839,14 @@ a {
 @keyframes cardHover {
     from{ transform: scale(1.0); }
     to{ transform: scale(1.2); }
+}
+
+
+.cardDescrA {
+    animation: descriprionAnimation 2s;
+    transition: 5s;
+}
+@keyframes descriprionAnimation {
+    from{ opacity: 0.1; }
+    to{ opacity: 100; }
 }
