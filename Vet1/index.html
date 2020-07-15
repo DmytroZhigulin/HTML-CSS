@@ -8,103 +8,131 @@
     <title>Vet1</title>
 </head>
 <body>
-    <header>
-        <div class="pre_header">
-            <div class="wrap">
-                <div class="pre_header__menu">
+
+    <!--Top section-->
+    <section class="pre_header">
+        <div class="wrap">
+            <nav>
+                <ul class="pre_header__menu">
                     <li>Apie mus</li>
-                    <li>Atsiskaitymas</li>
-                    <li>Pristatymas</li>
-                    <li>Grąžinimas ir garantijos</li>
-                </div>
+                    <li class="pre_header__menu_line">Atsiskaitymas</li>
+                    <li class="pre_header__menu_line">Pristatymas</li>
+                    <li class="pre_header__menu_line">Grąžinimas ir garantijos</li>
+                </ul>
+            </nav>
 
-                <div class="pre_header__contacts">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <a href="tel:+868373262" >8 683 73262</a>
-                    <div class="work_time"> (I-IV 8:00 - 17:00, V 8:00 - 16:00) </div>
+            <div class="pre_header__contacts">
+                <a href="tel:+868373262" class="pre_header__phoneTo">
 
-                    <div class="pre_header__contacts__links">
-                        <div class="fa fa-facebook"> </div>
-                        <div class="fa fa-youtube-play"></div>
-                    </div>
+                    <img src="img/phone.svg" alt="phoneTo">
+                    <p>8 683 73262</p>
+
+                </a>
+                
+                <div class="work_time"> (I-IV 8:00 - 17:00, V 8:00 - 16:00) </div>
+
+                <div class="pre_header__contacts__links">
+                    <a class="fa fa-facebook" href="https://www.facebook.com"> </a>
+                    <a class="fa fa-youtube-play" href="https://www.facebook.com"></a>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!--Header-->
+    <header>   
 
         <div class="container">
 
+            <!--Header part with logo-->
             <div class="main_header">
-                <div class="logo"></div>
+                <a href="#" class="logo"></a>
 
-                <div class="main_header__menu">
-                    <ul>
-                        <img src="img/header_layer_1.png" alt="location">
-                        Veterinarijos vaistinės
+                <div class="main_header__nav">
+                    <div class="main_header__service">
+                        <a href="#" class="service_card">
+                            <img src="img/header_layer_1.png" alt="location">
+                            <div class="service_card__text">
+                                <h3>Veterinarijos vaistinės</h3>
+                                <p>Kviečiame apsilankyti</p>
+                            </div>
+                        </a>
+                        <a href="#" class="service_card">
+                            <img src="img/header_layer_2.png" alt="hospital">
+                            <div class="service_card__text">
+                                <h3>GyvūNų klinika</h3>
+                                <p>Padėsime pasveikti!</p>
+                            </div>
+                        </a>
+                        <a href="#" class="service_card">
+                            <img src="img/header_layer_3.png" alt="care">
+                            <div class="service_card__text">
+                                <h3>GyvūNų kirpykla</h3>
+                                <p>Kviečiame pasitrumpinti</p>
+                            </div>
+                        </a>
+                          
+                    </div>
+                </div>
 
-                        <li>Kviečiame apsilankyti</li>
-                    </ul>
-                    <ul>
-                        <img src="img/header_layer_2.png" alt="hospital">
-                        GyvūNų klinika
-
-                        <li>Padėsime pasveikti!</li>
-                    </ul>
-                    <ul>
-                        <img src="img/header_layer_3.png" alt="care">
-                        GyvūNų kirpykla
-
-                        <li>Kviečiame pasitrumpinti</li>
-                    </ul>
+                <div class="main_header_userField">
+                    <a href="#" class="userProfile">
+                        <img src="img/user.svg" alt="user">
+                        <p>Prisijungimas</p>
+                    </a>
+                    <a href="#" class="userBasket">
+                        <img src="img/basket.svg" alt="basket">
+                        <div class="userBasket_circle">
+                            <p>0</p>
+                        </div>
+                    </a>
                 </div>
             </div>
 
-            <div class="main_menu">
-                <ul class="main_menu__group">
-                    <li> 
+            <!--Header main menu part-->
+            <nav class="main_menu">
+                
+                <ul>
+                    <li class="main_menu__group"> 
                         <a href="#">
                             <img src="img/dog.svg" alt="dog">
-                            <p>šunims</p>
-                            </a>
+                            šunims
+                        </a>
                     </li>
-                </ul>
-                <ul class="main_menu__group">
-                    <li> 
+                
+                    <li class="main_menu__group"> 
                         <a href="#">
                             <img src="img/cat.svg" alt="cat">
-                            <p>katėms</p>
-                            </a>
+                            katėms
+                        </a>
                     </li>
-                </ul>
-                <ul class="main_menu__group">
-                    <li> 
+                
+                    <li class="main_menu__group"> 
                         <a href="#">
                             <img src="img/homka.svg" alt="homka">
-                            <p>graužikams</p>
-                            </a>
+                            graužikams
+                        </a>
                     </li>
-                </ul>
-                <ul class="main_menu__group">
-                    <li> 
+                
+                    <li class="main_menu__group"> 
                         <a href="#">
                             <img src="img/pop.svg" alt="pop">
-                            <p>paukščiams</p>
-                            </a>
+                            paukščiams
+                        </a>
                     </li>
-                </ul>
-                <ul class="main_menu__group">
-                    <li> 
+                
+                    <li class="main_menu__group"> 
                         <a href="#">
                             <img src="img/fish.svg" alt="fish">
-                            <p>Žuvims</p>
-                            </a>
+                            Žuvims
+                        </a>
                     </li>
-                </ul>
-                <ul class="main_menu__group">
-                    <li> 
+                
+                    <li class="main_menu__group"> 
                         <a href="#">
                             <img src="img/cow.svg" alt="cow">
-                            <p>žemės ūkiui</p>
-                            </a>
+                            žemės ūkiui
+                        </a>
                     </li>
                 </ul>
 
@@ -116,15 +144,31 @@
                     
 
                 </div>
-            </div>
+    
+            </nav>
 
-
+            <!--Header banners-->
             <div class="banner">
                 <div class="banner_scroll left">
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                 </div>
-                <a href="#" class="banner_big"></a>
-                <a href="#" class="banner_small"></a>
+                <div class="banner_slide">
+                    <a href="#" class="big"></a>
+                    <a href="#" class="small"></a>
+                </div>
+                <div class="banner_slide">
+                    <a href="#" class="big2"></a>
+                    <a href="#" class="small2"></a>
+                </div>
+                <div class="banner_slide">
+                    <a href="#" class="big3"></a>
+                    <a href="#" class="small3"></a>
+                </div>
+                <div class="banner_slide">
+                    <a href="#" class="big4"></a>
+                    <a href="#" class="small4"></a>
+                </div>
+            
                 <div class="banner_scroll right">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>
@@ -133,9 +177,7 @@
         </div>   
     </header>
 
-
-
-
+    <!--Advantages section-->
     <section class="advantages">
         <div class="container">
 
@@ -204,6 +246,7 @@
         </div>
     </section>
 
+    <!--Product section-->
     <section class="product">
         <div class="container">
 
@@ -260,6 +303,7 @@
         </div>
     </section>
 
+    <!--Little banner section-->
     <section class="ban">
         <div class="container">
             <div class="ban_wrap">
@@ -268,6 +312,7 @@
         </div>
     </section>
 
+    <!--Blog section-->
     <section class="blog">
         <div class="container">
             <div class="blog_head">
@@ -320,6 +365,7 @@
         </div>
     </section>
 
+    <!--About Us section-->
     <section class="aboutUS">
         <div class="container">
             <h3 class="aboutUs_title">apie mus</h3>
@@ -335,6 +381,7 @@
         </div>
     </section>
 
+    <!--Newsletter section-->
     <section class="newsletter">
         <div class="container">
             <div class="newsletter_wrap">
@@ -355,6 +402,7 @@
         </div>  
     </section>
      
+    <!--Logos acordion-->
     <section class="logos">
         <div class="container">
             <div class="logos_acordion">
@@ -371,6 +419,7 @@
         </div>
     </section>
 
+    <!--Footer-->
     <footer>
         <div class="container">
             <div class="footer">
@@ -439,7 +488,6 @@
             </div>
         </div>
     </footer>
-
 
 
     <script src="https://use.fontawesome.com/e108678b87.js"></script>
