@@ -414,6 +414,8 @@ header .wrap {
   position: relative;
   margin-top: 38px;
   overflow: hidden;
+  -webkit-transition: 1s all;
+  transition: 1s all;
 }
 
 header .wrap_scroll {
@@ -483,8 +485,6 @@ header .banner_slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
   width: 100%;
 }
 
@@ -691,13 +691,47 @@ header .main_menu__searchField .request {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 15px 0px;
-  height: 225px;
+  height: 226px;
   width: 522px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.product_group:hover .product_group__title {
+  color: #ce0e2d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.product_group:hover .product_group__title + .line {
+  background-color: #006580;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.product_group img {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+}
+
+.product_group .parrot {
+  left: -150px;
+  top: -45px;
+}
+
+.product_group .cow {
+  top: 37px;
+}
+
+.product_group .hamster {
+  top: 30px;
 }
 
 .product_group__text {
-  margin: 85px auto;
+  margin-left: 55%;
+  padding-top: 15%;
 }
 
 .product_group__title {
@@ -712,34 +746,8 @@ header .main_menu__searchField .request {
   background-position: center;
   background-repeat: no-repeat;
   width: 55%;
-}
-
-.product_group__pic.one {
-  background-image: url(../img/dog.png);
-}
-
-.product_group__pic.two {
-  background-image: url(../img/cat.png);
-  top: 3px;
-  position: relative;
-}
-
-.product_group__pic.three {
-  background-image: url(../img/homka.png);
-}
-
-.product_group__pic.four {
-  background-image: url(../img/popugai.png);
-}
-
-.product_group__pic.five {
-  background-image: url(../img/fish.png);
-}
-
-.product_group__pic.six {
-  background-image: url(../img/Layer_14.png);
-  top: 5px;
-  position: relative;
+  height: 100%;
+  position: absolute;
 }
 
 .ban_wrap {
@@ -749,6 +757,50 @@ header .main_menu__searchField .request {
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 90px;
+}
+
+.items {
+  font-family: "Open Sans";
+  margin-bottom: 75px;
+}
+
+.items_nav {
+  margin: 0 auto;
+}
+
+.items_nav__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.items_nav__item {
+  padding: 15px 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  width: 33%;
+  border: 1px solid #f0f0f0;
+}
+
+.items_nav__item a {
+  color: #006580;
+}
+
+.items .btn_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.items .active_itemGroup {
+  font-size: 32px;
+  background-color: #f0f0f0;
+}
+
+.items .active_itemGroup a {
+  color: #ce0e2d;
 }
 
 .blog {
@@ -1039,6 +1091,10 @@ header .main_menu__searchField .request {
           flex-direction: row;
 }
 
+.footer_contacts .circles i {
+  margin-top: 30%;
+}
+
 .footer_contacts .circles .circle {
   width: 47px;
   height: 47px;
@@ -1046,6 +1102,13 @@ header .main_menu__searchField .request {
   border-radius: 50%;
   margin-right: 20px;
   color: #fff;
+  text-align: center;
+}
+
+.footer_contacts .circles .circle:hover {
+  background-color: #ce0e2d;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .footer h4 {

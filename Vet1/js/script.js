@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
           advantagesCard = document.querySelectorAll('.advantages_card__title'),
           productCard = document.querySelectorAll('.product_group'),
           productTitle = document.querySelectorAll('.product_group__title'),
+          itemTitle = document.querySelectorAll('.items_nav__item'),
           buttons = document.querySelectorAll('.btn'),
           logoIcon = document.querySelectorAll('.logos_img'),
           logoScroll = document.querySelectorAll('.logos_acordion > i'),
@@ -102,16 +103,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    
-
-
-    
-    
-    
-
-
-
-
     // showSlides(slideIndex);
 
     // function showSlides(n) {
@@ -142,4 +133,31 @@ window.addEventListener('DOMContentLoaded', () => {
     // }); 
     
 
+    function itemTitleActive() {
+   
+        function resetActiveItem() {
+            itemTitle.forEach(item => {
+        
+                item.classList.remove('active_itemGroup');
+                     
+            });
+        }
+        
+          
+        function defaultActiveItem( i = 0 ) {
+            itemTitle[i].classList.add('active_itemGroup');
+        }
+        defaultActiveItem();
+
+
+        itemTitle.forEach((item, index) => {
+        
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+                resetActiveItem();
+                defaultActiveItem(index);
+            });
+        });
+    }
+    itemTitleActive();
 });

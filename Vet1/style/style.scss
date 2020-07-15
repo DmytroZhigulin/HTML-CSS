@@ -362,6 +362,7 @@ header {
         position: relative;
         margin-top: 38px;
         overflow: hidden;
+        transition: 1s all;
 
         &_scroll {
             position: absolute;
@@ -415,6 +416,7 @@ header {
             }
         }
     }
+
     .banner {
         display: flex;
         justify-content: space-between;
@@ -422,7 +424,6 @@ header {
         &_slide {
 
             display: flex;
-            transition: 0.5s all;
             width: 100%;
 
             .big {
@@ -606,13 +607,42 @@ header {
         display: flex;
         justify-content: space-between;
         margin: 15px 0px;
-        height: 225px;
+        height: 226px;
         width: 522px;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        &:hover .product_group__title {
+            color: #ce0e2d;
+            transition: 0.5s;
+
+            +.line {
+                background-color: #006580;
+                transition: 0.5s;
+            }
+        }
         
+        img {
+            position: absolute;
+            top: 15px;
+            left: 25px;
+        }
+
+        .parrot {
+            left: -150px;
+            top: -45px;
+        }
+        .cow {
+            top: 37px;
+        }
+        .hamster {
+            top: 30px;
+        }
 
         &__text {
-            margin: 85px auto;
+            margin-left: 55%;
+            padding-top: 15%;
         }
 
         &__title {
@@ -630,29 +660,10 @@ header {
             background-position: center;
             background-repeat: no-repeat;
             width: 55%;
+            height: 100%;
+            position: absolute;
 
-            &.one {
-                background-image: url(../img/dog.png);
-            }
-            &.two {
-                background-image: url(../img/cat.png);
-                top: 3px;
-                position: relative;
-            }
-            &.three {
-                background-image: url(../img/homka.png);
-            }
-            &.four {
-                background-image: url(../img/popugai.png);
-            }
-            &.five {
-                background-image: url(../img/fish.png);
-            }
-            &.six {
-                background-image: url(../img/Layer_14.png);
-                top: 5px;
-                position: relative;
-            }
+            
         }
     }  
 }
@@ -667,6 +678,52 @@ header {
         background-repeat: no-repeat;
         background-position: center;
         margin-bottom: 90px;
+    }
+    
+}
+
+.items {
+
+    font-family: "Open Sans";
+    margin-bottom: 75px;
+   
+    &_nav {
+
+        margin: 0 auto; //????????
+     
+        &__wrap {
+            display: flex;
+            
+        }
+
+        &__item {
+            padding: 15px 0px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 24px;
+            width: 33%;
+            border: 1px solid #f0f0f0;
+
+            a {
+                color: #006580;
+            }
+        }
+    }
+    
+
+    .btn_wrap {
+       display: flex;
+    }
+
+    .active_itemGroup {
+        font-size: 32px;
+        background-color: #f0f0f0;
+
+        a {
+            color: #ce0e2d;
+            
+        }
     }
     
 }
@@ -934,6 +991,10 @@ header {
         display: flex;
         flex-direction: row;
 
+        i {
+            margin-top: 30%;
+        }
+
         .circle {
             width: 47px;
             height: 47px;
@@ -941,6 +1002,12 @@ header {
             border-radius: 50%;
             margin-right: 20px;
             color: #fff;
+            text-align: center;
+
+            &:hover {
+                background-color: #ce0e2d;
+                transition: 0.8s;
+            }
         }
     }
 
