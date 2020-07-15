@@ -9,14 +9,20 @@ window.addEventListener('DOMContentLoaded', () => {
           mainMenu = header.querySelectorAll('.main_menu__group'),
           prev = header.querySelector('.left'),
           next = header.querySelector('.right'),
+          bannerWrapper = header.querySelector('.wrap'),
+          bannerWindow = header.querySelector('.banner'),
           mainBanImg = header.querySelectorAll('.banner_slide'),
+          mainBanIndication = header.querySelectorAll('.inactive'),
           advantagesCard = document.querySelectorAll('.advantages_card__title'),
           productCard = document.querySelectorAll('.product_group'),
           productTitle = document.querySelectorAll('.product_group__title'),
           buttons = document.querySelectorAll('.btn'),
           logoIcon = document.querySelectorAll('.logos_img'),
           logoScroll = document.querySelectorAll('.logos_acordion > i'),
-          footer = document.querySelector('footer');
+          footer = document.querySelector('footer'),
+
+          width = window.getComputedStyle(bannerWrapper).width;
+
           
             
 
@@ -32,36 +38,108 @@ window.addEventListener('DOMContentLoaded', () => {
     // console.log(footer);
     // console.log(logoIcon);
     // console.log(logoScroll);
+    console.log(mainBanIndication);
 
 
     let slideIndex = 1;
+    let offset = 0;
 
-    showSlides(slideIndex);
+    bannerWindow.style.width = 100 * mainBanImg.length + '%';
 
-    function showSlides(n) {
+    mainBanImg.forEach(slide => {
+        slide.style.width = width;
+    });
 
-        if ( n > mainBanImg.length) {
-            slideIndex = 1;
+    mainBanIndication[ slideIndex - 1 ].classList.add('active');
+
+    next.addEventListener('click', () => {
+
+        if ( offset == parseInt(width) * (mainBanImg.length - 1)) {
+            offset = 0;   
+        } else {
+            offset += parseInt(width); 
         }
-
-        if ( n < 1 ) {
-            slideIndex = mainBanImg.length;
-        }
-
-        mainBanImg.forEach(item => item.style.display = 'none');
-
-        mainBanImg[ slideIndex - 1].style.display = '';
-
-    }
     
-    function plusSlides(n) {
-        showSlides( slideIndex += n )
-    }
+        bannerWindow.style.transform = `translateX(-${offset}px)`;
+    
+        if ( slideIndex == mainBanImg.length) {
+            slideIndex = 1;
+            mainBanIndication.forEach(item => item.classList.remove('active'));
+            mainBanIndication[ slideIndex - 1 ].classList.add('active');
+        } else {
+            mainBanIndication.forEach(item => item.classList.remove('active'));
+            slideIndex++;
+            mainBanIndication[ slideIndex - 1 ].classList.add('active');
+            
+        }
+    
+        console.log(slideIndex - 1);
+ 
+    });
+
 
     prev.addEventListener('click', () => {
-        plusSlides(-1);
+
+        if ( offset == 0 ) {
+            offset = parseInt(width) * (mainBanImg.length - 1);
+        } else {
+            offset -= parseInt(width);
+        }
+
+        bannerWindow.style.transform = `translateX(-${offset}px)`;
+
+        if ( slideIndex == 1) {
+            slideIndex = mainBanImg.length;
+            mainBanIndication.forEach(item => item.classList.remove('active'));
+            mainBanIndication[ slideIndex - 1 ].classList.add('active');
+        } else {
+            mainBanIndication.forEach(item => item.classList.remove('active'));
+            slideIndex--;
+            mainBanIndication[ slideIndex - 1 ].classList.add('active');
+        }
+
+        console.log(slideIndex - 1);
+
     });
-    next.addEventListener('click', () => {
-        plusSlides(1);
-    }); 
+
+    
+
+
+    
+    
+    
+
+
+
+
+    // showSlides(slideIndex);
+
+    // function showSlides(n) {
+
+    //     if ( n > mainBanImg.length) {
+    //         slideIndex = 1;
+    //     }
+
+    //     if ( n < 1 ) {
+    //         slideIndex = mainBanImg.length;
+    //     }
+
+    //     mainBanImg.forEach(item => item.style.display = 'none');
+    //     mainBanImg[ slideIndex - 1].style.display = '';
+    //     mainBanIndication.forEach(item => item.classList.remove('active'));
+    //     mainBanIndication[ slideIndex - 1 ].classList.add('active');
+    // }
+    
+    // function plusSlides(n) {
+    //     showSlides( slideIndex += n );
+    // }
+
+    // prev.addEventListener('click', () => {
+    //     plusSlides(-1);
+    // });
+    // next.addEventListener('click', () => {
+    //     plusSlides(1);
+    // }); 
+    
+
 });

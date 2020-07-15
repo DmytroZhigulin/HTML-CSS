@@ -410,6 +410,66 @@ header .main_header_userField .userBasket::before {
   margin: 0px 20px 0px 15px;
 }
 
+header .wrap {
+  position: relative;
+  margin-top: 38px;
+  overflow: hidden;
+}
+
+header .wrap_scroll {
+  position: absolute;
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  z-index: 1;
+}
+
+header .wrap_scroll i {
+  color: #006580;
+  margin-top: 7px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+header .wrap_scroll.left {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  top: 45%;
+  right: 98%;
+}
+
+header .wrap_scroll.right {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  top: 45%;
+  left: 98%;
+}
+
+header .wrap_activePos {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 450px;
+  left: 15px;
+}
+
+header .wrap_activePos .inactive {
+  width: 13px;
+  height: 13px;
+  background-color: #006580;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+header .wrap_activePos .active {
+  border: 6px solid #ce0e2d;
+  background-color: #fff;
+  position: relative;
+  top: -8px;
+}
+
 header .banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -417,42 +477,14 @@ header .banner {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 38px;
-  position: relative;
-}
-
-header .banner_scroll {
-  position: absolute;
-  background-color: #fff;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-}
-
-header .banner_scroll i {
-  color: #006580;
-  margin-top: 7px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-header .banner_scroll.left {
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  top: 45%;
-}
-
-header .banner_scroll.right {
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
-  top: 45%;
-  left: 98%;
 }
 
 header .banner_slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
   width: 100%;
 }
 
