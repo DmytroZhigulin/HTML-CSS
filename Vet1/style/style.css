@@ -479,6 +479,8 @@ header .banner {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 header .banner_slide {
@@ -506,8 +508,9 @@ header .banner_slide .small {
 }
 
 header .banner_slide .big2 {
-  background-image: url(../img/banner_big2.png);
+  background-image: url(../img/planetPet.jpg);
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   margin-right: 30px;
   width: 70%;
@@ -523,8 +526,9 @@ header .banner_slide .small2 {
 }
 
 header .banner_slide .big3 {
-  background-image: url(../img/banner_big3.png);
+  background-image: url(../img/Josera.jpg);
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   margin-right: 30px;
   width: 70%;
@@ -540,8 +544,9 @@ header .banner_slide .small3 {
 }
 
 header .banner_slide .big4 {
-  background-image: url(../img/banner_big4.png);
+  background-image: url(../img/Bubimex.png);
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   margin-right: 30px;
   width: 70%;

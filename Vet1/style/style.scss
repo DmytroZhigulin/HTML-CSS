@@ -420,6 +420,7 @@ header {
     .banner {
         display: flex;
         justify-content: space-between;
+        transition: all 0.5s ease 0s;
         
         &_slide {
 
@@ -444,8 +445,9 @@ header {
             }
 
             .big2 {
-                background-image: url(../img/banner_big2.png);
+                background-image: url(../img/planetPet.jpg);
                 background-position: center;
+                background-size: cover;
                 background-repeat: no-repeat;
                 margin-right: 30px;
                 width: 70%;
@@ -460,8 +462,9 @@ header {
                 height: 490px;
             }
             .big3 {
-                background-image: url(../img/banner_big3.png);
+                background-image: url(../img/Josera.jpg);
                 background-position: center;
+                background-size: cover;
                 background-repeat: no-repeat;
                 margin-right: 30px;
                 width: 70%;
@@ -476,8 +479,9 @@ header {
                 height: 490px;
             }
             .big4 {
-                background-image: url(../img/banner_big4.png);
+                background-image: url(../img/Bubimex.png);
                 background-position: center;
+                background-size: cover;
                 background-repeat: no-repeat;
                 margin-right: 30px;
                 width: 70%;

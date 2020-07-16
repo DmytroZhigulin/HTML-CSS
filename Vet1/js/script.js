@@ -16,7 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
           advantagesCard = document.querySelectorAll('.advantages_card__title'),
           productCard = document.querySelectorAll('.product_group'),
           productTitle = document.querySelectorAll('.product_group__title'),
-          itemTitle = document.querySelectorAll('.items_nav__item'),
+          itemNavBlock = document.querySelector('.items_nav'),
+          itemTitle = itemNavBlock.querySelectorAll('.items_nav__item'),
           buttons = document.querySelectorAll('.btn'),
           logoIcon = document.querySelectorAll('.logos_img'),
           logoScroll = document.querySelectorAll('.logos_acordion > i'),
@@ -52,56 +53,91 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     mainBanIndication[ slideIndex - 1 ].classList.add('active');
+    nextSlide();
+    prevSlide();
 
-    next.addEventListener('click', () => {
+    function nextSlide() {
 
-        if ( offset == parseInt(width) * (mainBanImg.length - 1)) {
-            offset = 0;   
-        } else {
-            offset += parseInt(width); 
-        }
+        next.addEventListener('click', () => {
+
+            if ( offset == parseInt(width) * (mainBanImg.length - 1)) {
+                offset = 0;   
+            } else {
+                offset += parseInt(width); 
+            }
+        
+            bannerWindow.style.transform = `translateX(-${offset}px)`;
+        
+            if ( slideIndex == mainBanImg.length) {
+                slideIndex = 1;
+                mainBanIndication.forEach(item => item.classList.remove('active'));
+                mainBanIndication[ slideIndex - 1 ].classList.add('active');
+            } else {
+                mainBanIndication.forEach(item => item.classList.remove('active'));
+                slideIndex++;
+                mainBanIndication[ slideIndex - 1 ].classList.add('active');
+                
+            }
+            // console.log(slideIndex - 1);
+        });
+    }
+
+
+    function prevSlide() {
+        
+        prev.addEventListener('click', () => {
+
+            if ( offset == 0 ) {
+                offset = parseInt(width) * (mainBanImg.length - 1);
+            } else {
+                offset -= parseInt(width);
+            }
     
-        bannerWindow.style.transform = `translateX(-${offset}px)`;
+            bannerWindow.style.transform = `translateX(-${offset}px)`;
     
-        if ( slideIndex == mainBanImg.length) {
-            slideIndex = 1;
-            mainBanIndication.forEach(item => item.classList.remove('active'));
-            mainBanIndication[ slideIndex - 1 ].classList.add('active');
-        } else {
-            mainBanIndication.forEach(item => item.classList.remove('active'));
-            slideIndex++;
-            mainBanIndication[ slideIndex - 1 ].classList.add('active');
-            
-        }
+            if ( slideIndex == 1) {
+                slideIndex = mainBanImg.length;
+                mainBanIndication.forEach(item => item.classList.remove('active'));
+                mainBanIndication[ slideIndex - 1 ].classList.add('active');
+            } else {
+                mainBanIndication.forEach(item => item.classList.remove('active'));
+                slideIndex--;
+                mainBanIndication[ slideIndex - 1 ].classList.add('active');
+            }
     
-        console.log(slideIndex - 1);
- 
-    });
+            // console.log(slideIndex - 1);
+    
+        });
 
+    }
 
-    prev.addEventListener('click', () => {
+    
+    function autoSlide() {
+        let timer = setInterval(function sliderAuto() {
 
-        if ( offset == 0 ) {
-            offset = parseInt(width) * (mainBanImg.length - 1);
-        } else {
-            offset -= parseInt(width);
-        }
+            if ( offset == parseInt(width) * (mainBanImg.length - 1)) {
+                offset = 0;   
+            } else {
+                offset += parseInt(width); 
+            }
+        
+            bannerWindow.style.transform = `translateX(-${offset}px)`;
 
-        bannerWindow.style.transform = `translateX(-${offset}px)`;
-
-        if ( slideIndex == 1) {
-            slideIndex = mainBanImg.length;
-            mainBanIndication.forEach(item => item.classList.remove('active'));
-            mainBanIndication[ slideIndex - 1 ].classList.add('active');
-        } else {
-            mainBanIndication.forEach(item => item.classList.remove('active'));
-            slideIndex--;
-            mainBanIndication[ slideIndex - 1 ].classList.add('active');
-        }
-
-        console.log(slideIndex - 1);
-
-    });
+            if ( slideIndex == mainBanImg.length) {
+                slideIndex = 1;
+                mainBanIndication.forEach(item => item.classList.remove('active'));
+                mainBanIndication[ slideIndex - 1 ].classList.add('active');
+            } else {
+                mainBanIndication.forEach(item => item.classList.remove('active'));
+                slideIndex++;
+                mainBanIndication[ slideIndex - 1 ].classList.add('active');
+                
+            }
+        }, 5000);
+    }
+    autoSlide();
+    
+    
 
     // showSlides(slideIndex);
 
@@ -142,7 +178,6 @@ window.addEventListener('DOMContentLoaded', () => {
                      
             });
         }
-        
           
         function defaultActiveItem( i = 0 ) {
             itemTitle[i].classList.add('active_itemGroup');
@@ -154,6 +189,7 @@ window.addEventListener('DOMContentLoaded', () => {
         
             item.addEventListener('click', (event) => {
                 event.preventDefault();
+                
                 resetActiveItem();
                 defaultActiveItem(index);
             });
