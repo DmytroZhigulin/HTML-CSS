@@ -770,7 +770,7 @@ header .main_menu__searchField .request {
 }
 
 .items_nav {
-  margin: 0 auto;
+  padding-bottom: 70px;
 }
 
 .items_nav__wrap {
@@ -793,10 +793,48 @@ header .main_menu__searchField .request {
   color: #006580;
 }
 
+.items_field {
+  position: relative;
+  background-color: linear-gradient(#f0f0f0 0%, white, 520px, white 100%);
+}
+
+.items_field .products_filter {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0px;
+  left: 27px;
+}
+
+.items_field .products_filter__item {
+  background-color: #e0ecef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 25px;
+  border-bottom: 1px solid #c6cfd1;
+}
+
+.items_field .products_filter__item img {
+  width: 100%;
+}
+
 .items .btn_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 70px;
 }
 
 .items .active_itemGroup {

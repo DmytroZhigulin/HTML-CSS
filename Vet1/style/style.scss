@@ -693,7 +693,7 @@ header {
    
     &_nav {
 
-        margin: 0 auto; //????????
+        padding-bottom: 70px;
      
         &__wrap {
             display: flex;
@@ -714,10 +714,47 @@ header {
             }
         }
     }
+
+    &_field {
+        position: relative;
+        background-color: linear-gradient(rgb(240, 240, 240) 0%, 
+                        rgb(255, 255, 255), 520px,
+                        rgb(255, 255, 255) 100%);
+
+
+
+
+
+        .products_filter {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 0px;
+            left: 27px;
+
+            &__item {
+                background-color: #e0ecef;
+                // width: 65px;
+                // height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 30px 25px;
+                border-bottom: 1px solid #c6cfd1;
+
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
     
 
     .btn_wrap {
        display: flex;
+       margin-top: 70px;
     }
 
     .active_itemGroup {
