@@ -603,7 +603,6 @@
                         </div>
                         <div class="circ active"></div>
                         <div class="circ"></div>
-                        <div class="circ"></div>
                         <div class="arrowRight">
                             <svg width="68" height="16" viewBox="0 0 68 16" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M67.7071 7.2929C68.0976 7.68342 68.0976 8.31659 67.7071 8.70711L61.3431 15.0711C60.9526 15.4616 60.3195 15.4616 59.9289 15.0711C59.5384 14.6805 59.5384 14.0474 59.9289 13.6569L65.5858 8.00001L59.9289 2.34315C59.5384 1.95263 59.5384 1.31946 59.9289 0.928937C60.3195 0.538413 60.9526 0.538413 61.3431 0.928938L67.7071 7.2929ZM8.74228e-08 7L67 7.00001L67 9.00001L-8.74228e-08 9L8.74228e-08 7Z"/>
@@ -673,18 +672,19 @@
 
                     <!--FORM HERE-->
                     <div class="contacts_formBlock">
-                        <form action="#" class="contacts_form" name="request">
+                        <form class="contacts_form">
+                            <div id="pageForm_error"></div>
 
                             <p class="contacts_form__fields">
 
                                 <label for="username">ФІО / Назва компанії:</label><br>
-                                <input required type="text" name="name" id="username" class="form_field" placeholder="">
+                                <input  type="text" name="name" id="username" class="form_field" >
                                 <br>
                                 <label for="mail">Email:</label><br>
-                                <input required type="email" name="mail" id="mail" class="form_field" placeholder="">
+                                <input  type="email" name="mail" id="mail" class="form_field">
                                 <br>
                                 <label for="userphone">Телефон:</label><br>
-                                <input required type="tel" name="userphone" id="userphone" class="form_field" placeholder="">
+                                <input  type="tel" name="userphone" id="userphone" class="form_field">
                                 
 
                             </p>
@@ -692,11 +692,11 @@
                             <p class="contacts_form__textarea">
 
                                 <label for="messege">Ваше повідомлення: </label><br>
-                                <textarea required name="maintext" id="messege"  class="textarea" placeholder=""></textarea>
+                                <textarea required name="maintext" id="message"  class="textarea"></textarea>
 
                             </p>
 
-                            <button class="btn formBtn">відправити</button>
+                            <button type="submit" class="btn formBtn">відправити</button>
 
                         </form>
 
@@ -730,14 +730,15 @@
     <div class="modal hide">
         <div class="modal__dialog">
             <div class="modal__content">
+                <div id="modal_error"></div>
                 <form class="modal_form">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">Подати заявку</div>
                     <label for="modal_name">Ваше ім’я:</label><br>
-                    <input required  id="modal_name" name="name" type="text" class="modal__input">
+                    <input data-rule="name"  id="modal_name" name="name" type="text" class="modal__input">
                     <label for="modal_phone">Телефон:</label><br>
-                    <input required id="modal_phone" name="phone" type="tel" class="modal__input">
-                    <input type="submit" value="відправити" class="btn modalBtn">
+                    <input data-rule="phone" id="modal_phone" name="phone" type="tel" class="modal__input">
+                    <button type="submit" class="btn modalBtn">відправити</button>
                 </form>
             </div>
         </div>

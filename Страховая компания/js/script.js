@@ -22,11 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
           reviewsCirc = document.querySelectorAll('.circ');
           
 
-
-
-          
-          
-
     // Modal window show and close
     function modalWindow() {
 
@@ -38,6 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.classList.remove('hide');
                 modal.classList.add('show');
                 document.body.style.overflow = 'hidden';
+
+                modalFormValid();
                 
             });
         });
@@ -46,6 +43,8 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.classList.remove('show');
             modal.classList.add('hide');
             document.body.style.overflow = '';
+
+            
         }
         
 
@@ -123,4 +122,75 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
     reviewsAnimation();
+
+
+    //Modal Valid
+    function modalFormValid() {
+
+        let modalForm = document.querySelector('.modal_form'),
+            modalNameField = document.getElementById('modal_name'),
+            modalPhoneField = document.getElementById('modal_phone'),
+            modalErr = document.getElementById('modal_error');
+
+            modalForm.addEventListener('submit', (e) => {
+
+                let errors = [];
+
+                if (modalNameField.value === '' || modalNameField.value === null) {
+                    errors.push("Введіть ім'я");
+                } else if (modalPhoneField.value === '' || modalPhoneField.value === null) {
+                    errors.push("Введіть номер телефону");
+                }
+
+                if (errors.length > 0) {
+                    e.preventDefault();
+                    modalErr.innerText = errors;
+                }   
+            });
+    }
+
+
+    //Page Form Valid
+    function pageFormValid() {
+
+        let pageNameField = document.getElementById('username'),
+            pageMailField = document.getElementById('mail'),
+            pagePhoneField = document.getElementById('userphone'),
+            pageMessage = document.getElementById('message'),
+            pageFormErr = document.getElementById('pageForm_error'),
+            btn = document.querySelector('.formBtn');
+            
+
+            btn.addEventListener('click', (e) => {
+                console.log('2');
+                let err = [];
+
+                if (pageNameField.value === '' || pageNameField.value === null) {
+                    err.push("0");
+                    pageNameField.style.border = "1px solid red";
+                }
+                if (pageMailField.value === '' || pageMailField.value === null) {
+                    err.push("1");
+                    pageMailField.style.border = "1px solid red";
+                }
+                if (pagePhoneField.value === '' || pagePhoneField.value === null) {
+                    err.push("2");
+                    pagePhoneField.style.border = "1px solid red";
+                }
+                if (pageMessage.value === '' || pageMessage.value === null) {
+                    err.push("3");
+                    pageMessage.style.border = "1px solid red";
+                }
+
+                if (err.length > 0) {
+                    e.preventDefault();
+                    pageFormErr.innerText = "Заповніть усі поля";
+                } 
+                
+            });
+            
+    }
+    pageFormValid();
+
+    
 });   

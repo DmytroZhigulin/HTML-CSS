@@ -787,10 +787,6 @@ a {
   background-color: #D0935A;
 }
 
-.reviews_nav .circ:nth-of-type(3) {
-  display: none;
-}
-
 .reviews_nav .arrowLeft,
 .reviews_nav .arrowRight {
   width: 68px;
@@ -2743,5 +2739,23 @@ a {
     top: 23px;
     right: 42px;
   }
+}
+
+#modal_error {
+  font-weight: bold;
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  right: 40px;
+  top: 70px;
+}
+
+#pageForm_error {
+  font-weight: bold;
+  font-size: 14px;
+  color: red;
+  position: absolute;
+  left: 26%;
+  top: 0;
 }
 /*# sourceMappingURL=style.css.map */
