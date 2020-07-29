@@ -244,7 +244,6 @@ body {
 }
 .card_text {
     margin-top: 45px; 
-    justify-content: baseline;
 }
   /*END services cards*/
 
@@ -545,7 +544,7 @@ footer {
 
 /* styles for 1024px resolution */
 
-@media (max-device-width:1024px) {
+@media (max-width:1024px) {
     
     .container {
         max-width: 90%;
@@ -697,7 +696,7 @@ footer {
 
     /* styles for 890px resolution */
 }
-@media (max-device-width:890px) {
+@media (max-width:890px) {
 
     .container {
         max-width: 90%;
@@ -748,7 +747,7 @@ footer {
 
 /* Fixes for 768px resolution */
 
-@media (max-device-width:768px) {
+@media (max-width:768px) {
 
     .container {
         max-width: 90%;
@@ -793,7 +792,7 @@ footer {
 
 /* Fixes for 512px resolution */
 
-@media (max-device-width:512px) {
+@media (max-width:512px) {
 
     .container {
         max-width: 90%;
