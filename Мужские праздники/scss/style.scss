@@ -17,6 +17,14 @@ a {
 .visible {
     display: block;
 }
+.animated {
+    animation: recall 1s linear 0s infinite;
+}
+@keyframes recall {
+    0% { transform: rotateZ(-10deg);}
+    50% { transform: rotateZ(10deg);}
+    100% { transform: rotateZ(-10deg);}
+   }
 .container {
     max-width: 1678px;
     margin: 0 auto;
@@ -407,6 +415,13 @@ header {
     color: #F2C94C;
     font-size: 30px;
     opacity: 80%;
+    z-index: 1;
+    display: none;
+
+    &:hover {
+        opacity: 100%;
+        font-size: 34px;
+    }
 }
 
 footer {
@@ -428,5 +443,39 @@ footer {
             color: #EABF3C;
             text-decoration: none;
         }
+    }
+}
+
+
+#triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid red;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.7);
+
+    &_block {
+        max-width: 415px;
+        margin: 131px auto;
+        background-image: url(../img/boby_bg.png);
+        border: 1px solid #EABF3C;
+        border-radius: 10px;
+    }
+    &_content {
+        position: relative;
+        width: 100%;
+        padding: 19px 29px 30px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    label {
+        color: #EABF3C;
+        font-family: 'Lobster', cursive;
+        font-size: 20px;
     }
 }

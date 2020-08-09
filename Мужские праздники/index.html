@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/style.css">
     <title>Мужские праздники</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
                     <div class="header_title">
                         <h1>Создаем мужские праздники</h1>
                         <p>Раки, пенное, бургеры, острые крылья, наггетсы и многое другое на ваше мероприятие</p>
-                        <button class="btn">Заказать</button>
+                        <button class="btn" data-type="recall">Заказать</button>
                     </div>
                 </div> 
             </div>
@@ -171,7 +171,7 @@
                             Egestas fermentum, egestas semper et aliquam cursus consectetur. Sem porttitor quam erat dui nisl elementum odio. 
                             Tempus ut facilisi tincidunt ornare ut dignissim vitae blandit dictum.
                         </p>
-                        <button class="btn">Заказать</button>
+                        <button class="btn" data-type="recall">Заказать</button>
                     </div>
                     <div class="recepts_decscr">
                         <div class="recepts_decscr__card">
@@ -284,9 +284,24 @@
     </main>
 
     <aside>
-        <button class="recall">
+        <button class="recall animated" data-type="recall">
             <i class="fa fa-phone" aria-hidden="true"></i>
         </button>
+
+        <div class="modal">
+            <div class="modal_block">
+                <div class="modal_content">
+                    <div class="modal_close"></div>
+                    <form action="#" class="modal_form">
+                        <label for="user">Ваше имя</label><br>
+                        <input type="text" class="user_name" id="user" required><br>
+                        <label for="phone">Ваш номер</label><br>
+                        <input type="tel" class="user_phone" id="phone" required>
+                        <button class="btn modalBtn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </aside>
 
     <footer>
