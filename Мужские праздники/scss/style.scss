@@ -471,11 +471,32 @@ footer {
         padding: 19px 29px 30px;
         max-height: 80vh;
         overflow-y: auto;
+        text-align: center;
+    }
+    &_close {
+        background-color: transparent;
+        border: none;
+        color: #EABF3C;
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        left: 375px;
     }
 
-    label {
+    h4 {
         color: #EABF3C;
         font-family: 'Lobster', cursive;
-        font-size: 20px;
+        font-size: 25px;
+        margin-top: 25px;
+    }
+    input {
+        background-color: transparent;
+        border: 1px solid #F2F2F2;
+        border-radius: 30px;
+        padding-left: 20px;
+        font-size: 18px;
+        color: #EABF3C;
+        height: 50px;
+        margin-top: 25px;
     }
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/style.css">
     <title>Мужские праздники</title>
 </head>
 <body>
@@ -291,13 +291,16 @@
         <div class="modal">
             <div class="modal_block">
                 <div class="modal_content">
-                    <div class="modal_close"></div>
+                    
+                    <button type="button" class="modal_close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    
                     <form action="#" class="modal_form">
-                        <label for="user">Ваше имя</label><br>
-                        <input type="text" class="user_name" id="user" required><br>
-                        <label for="phone">Ваш номер</label><br>
-                        <input type="tel" class="user_phone" id="phone" required>
-                        <button class="btn modalBtn">Отправить</button>
+                        <h4>Мы свяжемся с вами в течении 5 минут</h4>
+                        <input type="text" class="user_name" placeholder="Ваше имя" required><br>
+                        <input type="tel" class="user_phone" placeholder="Номер телефона" required>
+                        <button class="btn modalBtn" type="submit">Отправить</button>
                     </form>
                 </div>
             </div>

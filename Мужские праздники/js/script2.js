@@ -20,31 +20,30 @@ $(document).ready( function() {
             $(this).click(
                 function() {
                     console.log(`clicked ${i}`);//delete after finish
-                    modal.fadeIn("slow");
+                    modal.css("display", "block");
                 }
             );   
         });
 
         //Main close modal func
         let modalClose = () => {
-            modal.fadeOut("slow");
+            modal.css("display", "none");
         };
         //Close modal by click on close button
         $(".modal_close").click(modalClose);
 
         //Close modal by click on ESC key
         $(document).on('keydown', function(e){
-            if (e.code === 'Escape') {
+            // if (e.code === 'Escape') {
                 modalClose();
-            }
+            // }
         });
 
-        
         modal.click(function(e) {
-            if (e.target === modal) {
+            // if (e.target === modal) {
                 modalClose();
-            }
-        });//???
+            // 
+        });
     }
     modalWindow();
     
