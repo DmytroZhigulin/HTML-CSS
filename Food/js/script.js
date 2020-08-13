@@ -47,55 +47,73 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
 
-        //TIMER
-        const deadline = '2020-08-20';
+    //TIMER
+    const deadline = '2020-08-20';
 
-        function getTimeRemaning(endtime) {
-            const t = Date.parse(endtime) - Date.parse(new Date()),
-                days = Math.floor(t / (1000 * 60 * 60 * 24)),
-                hours = Math.floor((t / (1000 * 60 * 60) % 24)),
-                minutes = Math.floor((t / 1000 / 60) % 60),
-                seconds = Math.floor((t / 1000) % 60);
+    function getTimeRemaning(endtime) {
+        const t = Date.parse(endtime) - Date.parse(new Date()),
+            days = Math.floor(t / (1000 * 60 * 60 * 24)),
+            hours = Math.floor((t / (1000 * 60 * 60) % 24)),
+            minutes = Math.floor((t / 1000 / 60) % 60),
+            seconds = Math.floor((t / 1000) % 60);
 
-            return {
-                'total': t,
-                'days': days,
-                'hours': hours,
-                'minutes': minutes,
-                'seconds': seconds
-            };
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
+
+    function getZero(num) {
+        if( num >= 0 && num < 10 ) {
+            return `0${num}`;
+        } else {
+            return num;
         }
+    }
 
-        function getZero(num) {
-            if( num >= 0 && num < 10 ) {
-                return `0${num}`;
-            } else {
-                return num;
+    function setClock(selector, endtime) {
+        const timer = document.querySelector(selector),
+            days = timer.querySelector('#days'),
+            hours = timer.querySelector('#hours'),
+            minutes = timer.querySelector('#minutes'),
+            seconds = timer.querySelector('#seconds'),
+            timeInterval = setInterval(updateClock, 1000);
+
+        updateClock();
+
+        function updateClock() {
+            const t = getTimeRemaning(endtime);
+
+            days.innerHTML = getZero(t.days);
+            hours.innerHTML = getZero(t.hours);
+            minutes.innerHTML = getZero(t.minutes);
+            seconds.innerHTML = getZero(t.seconds);
+
+            if ( t.total <= 0 ) {
+                clearInterval(timeInterval);
             }
         }
+    }
+    setClock('.timer', deadline);
 
-        function setClock(selector, endtime) {
-            const timer = document.querySelector(selector),
-                days = timer.querySelector('#days'),
-                hours = timer.querySelector('#hours'),
-                minutes = timer.querySelector('#minutes'),
-                seconds = timer.querySelector('#seconds'),
-                timeInterval = setInterval(updateClock, 1000);
 
-            updateClock();
+    //MODAL
+    const modal = document.querySelector('.modal'),
+        btn = document.querySelectorAll("[data-modal]"),
+        modalCloseBtn = document.querySelectorAll(".modal__close");
 
-            function updateClock() {
-                const t = getTimeRemaning(endtime);
+        console.log(btn);
+        console.log(modalCloseBtn);
 
-                days.innerHTML = getZero(t.days);
-                hours.innerHTML = getZero(t.hours);
-                minutes.innerHTML = getZero(t.minutes);
-                seconds.innerHTML = getZero(t.seconds);
+        btn.forEach(item => {
+            item.addEventListener('click', (e) =>{
+                modal.classList.add('show');
+            });
+        });
 
-                if ( t.total <= 0 ) {
-                    clearInterval(timeInterval);
-                }
-            }
-        }
-        setClock('.timer', deadline);
+        
+         
 });
