@@ -41,8 +41,9 @@ $(document).ready( function() {
 
         
         modal.click(function(e) {
+            console.log(e.target);
             if (e.target === modal) {
-                modalClose();
+                modalClose(); 
             }
         });//???
     }
