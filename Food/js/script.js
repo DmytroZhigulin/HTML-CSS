@@ -285,6 +285,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         prevModalDialog.classList.add('hide');
         openModal();
+        
 
         const thanksModal = document.createElement('div');
         thanksModal.classList.add('modal__dialog');
@@ -297,8 +298,7 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.modal').append(thanksModal);
         setTimeout(() => {
             thanksModal.remove();
-            prevModalDialog.classList.add('show');
-            prevModalDialog.classList.remove('hide');
+            prevModalDialog.classList.toggle('hide');
             closeModal();
         }, 1000);
     }     
