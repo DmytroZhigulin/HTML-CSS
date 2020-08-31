@@ -619,6 +619,10 @@ a{
     animation: tabAnimation 2s;
     transition: 5s;
 }
+.spinner {
+    display: block;
+    margin: 0 auto;
+}
 
 
 
