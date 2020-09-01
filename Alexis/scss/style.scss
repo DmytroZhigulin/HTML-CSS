@@ -343,6 +343,7 @@ a {
         text-align: center;
         box-shadow: 10px 15px 5px #edebeb;
         cursor: pointer;
+        border-bottom: 2px solid #fc5f45;
         
 
         img {
@@ -362,27 +363,11 @@ a {
             padding: 0 30px 65px;
         }
 
-        &__line {
-            height: 2px;
-            background-color: #fc5f45;
-            
-            &__green {
-                background-color: #38c695;
-                height: 2px;
-            }
-            &__purple {
-                background-color: #b27cf5;
-                height: 2px;
-            }
-            &__orange {
-                background-color: #feb960;
-                height: 2px;
-            }
+        &:hover {
+            transition: 0.5s;
+            transform: scale(1.2);
         }
         
-    }
-    &__card:first-child {
-        border-bottom: 2px solid #fc5f45;
     }
 }
 
@@ -831,17 +816,6 @@ a {
 
 
 // -------ANIMATIONS
-.onHover {
-    cursor: pointer;
-    animation: cardHover 1s;
-    animation-fill-mode: forwards;
-}
-@keyframes cardHover {
-    from{ transform: scale(1.0); }
-    to{ transform: scale(1.2); }
-}
-
-
 .cardDescrA {
     animation: descriprionAnimation 2s;
     transition: 5s;

@@ -367,6 +367,7 @@ a {
   -webkit-box-shadow: 10px 15px 5px #edebeb;
           box-shadow: 10px 15px 5px #edebeb;
   cursor: pointer;
+  border-bottom: 2px solid #fc5f45;
 }
 
 .ourFocus__card img {
@@ -386,28 +387,11 @@ a {
   padding: 0 30px 65px;
 }
 
-.ourFocus__card__line {
-  height: 2px;
-  background-color: #fc5f45;
-}
-
-.ourFocus__card__line__green {
-  background-color: #38c695;
-  height: 2px;
-}
-
-.ourFocus__card__line__purple {
-  background-color: #b27cf5;
-  height: 2px;
-}
-
-.ourFocus__card__line__orange {
-  background-color: #feb960;
-  height: 2px;
-}
-
-.ourFocus__card:first-child {
-  border-bottom: 2px solid #fc5f45;
+.ourFocus__card:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .videoSection {
@@ -897,36 +881,6 @@ a {
   font-size: 20px;
   padding: 35px 0px;
   font-weight: 500;
-}
-
-.onHover {
-  cursor: pointer;
-  -webkit-animation: cardHover 1s;
-          animation: cardHover 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes cardHover {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-}
-
-@keyframes cardHover {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
 }
 
 .cardDescrA {
