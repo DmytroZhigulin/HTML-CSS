@@ -14,44 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
     // console.log(formCheckbox);
     // console.log(formButton);
 
-
-
-
-    const startPlan = {
-    name: 'Starter',
-    monthPay: 'Free',
-    typeOfService: 'Free service',
-    accounts: 'Multiple accounts',
-    planManage: 'Management NO',
-    dataType: '--',
-    techSupp: '--',
-    };
-
-    const businessPlan = {
-    name: 'Business',
-    monthPay: '$97',
-    typeOfService: 'Free service',
-    accounts: 'Multiple accounts',
-    planManage: 'Limited management',
-    dataType: 'Limited Data',
-    techSupp: '',
-    };
-
-    const professionalPlan = {
-    name: 'Professional',
-    monthPay: '$297',
-    typeOfService: 'free service',
-    accounts: 'Multiple accounts',
-    planManage: 'Unlimited management ',
-    dataType: 'Unlimited data',
-    techSupp: 'Whatever You Need',
-    };
-
-
-    // console.log(startPlan);
-    // console.log(businessPlan);
-    // console.log(professionalPlan);
-
     //функция события 'клик' на основном меню
     function mainMenuFunc(menu) {
 
@@ -72,45 +34,128 @@ window.addEventListener('DOMContentLoaded', () => {
     //функция проверки корректного заполнения формы хедера
     function formCheck(form) {
 
-    formButton.addEventListener('click', () => {
+    formButton.addEventListener('click', (e) => {
 
+        e.preventDefault();
         if (formCheckbox.checked === true) {
 
-            console.log('checked');
-
-            console.log('form button clicked!');
             let userInfo = [];
 
-                inputField.forEach((item, index) => {
-                    // console.log(item);
-                    if ( item.value != '' && item.value != null) {
+            inputField.forEach((item, index) => {
+                
+                if ( item.value != '' && item.value != null) {
 
-                        userInfo.push(item.value);
-                        console.log(`done on ${index}`);
+                    userInfo.push(item.value);
+                    console.log(`done on ${index}`);
 
-                    } else {
-                        console.log(`err on ${index}`);
-                        alert("All fields must be filled");
-                    }
-                });
-
-                // for ( let field of inputField) {   
-                //     if ( field.value != '' && field.value != null) {
-                //         userInfo.push(field.value);
-                //     } else {
-                //         console.log(`err on ${field}`);
-                //         alert("All fields must be filled");
-                //     }
-                // }
+                } else {
+                    console.log(`err on ${index}`);
+                    alert("All fields must be filled");
+                }
+            });
     
             console.log(userInfo);
 
         } else {
             alert('You must read and accept the terms & conditions');
         }
+        form.reset();
     });
     }
     formCheck(headerForm);
+
+
+
+    //PRICING CARDS
+
+    class pricingCard {
+        constructor(title, tarif, data, needs, btn, parentSelector, ...classes) {
+            this.title = title;
+            this.tarif = tarif;
+            this.data = data;
+            this.needs = needs;
+            this.classes = classes;
+            this.btn = btn;
+            this.parent = document.querySelector(parentSelector);
+        }
+
+        render() {
+            const elem = document.createElement('div');
+
+            if (this.classes.length === 0) {
+                this.element = "pricing_card";
+                elem.classList.add(this.element);
+            } else {
+                this.classes.forEach(className => elem.classList.add(className));
+            }
+        
+            elem.innerHTML = `
+                <h4 class="pricing_c_title">${this.title}</h4>
+                <h3 class="pricing_c_tarif">${this.tarif}</h3>
+                <p>Free Service</p>
+                <p>Multiple Accounts</p>
+                <p>Management No</p>
+                <p>${this.data}</p>
+                <p>${this.needs}</p>
+                <a href="#" class="card_button">${this.btn}</a>
+            `;
+            this.parent.append(elem);
+        }
+        
+    }
+
+    class pricingCardPopular extends pricingCard {
+        constructor(title, tarif, data, needs, btn, parentSelector, ...classes) {
+            super(title, tarif, data, needs, btn, parentSelector, ...classes);
+        }
+
+        render() {
+            const elem = document.createElement('div');
+            elem.classList.add('pricing_card');
+
+            elem.innerHTML = `
+                <div class="wrap">
+                    <div class="trinagle"></div>
+                </div>
+                <h4 class="pricing_c_title">${this.title}</h4>
+                <h3 class="pricing_c_tarif">${this.tarif}</h3>
+                <p>Free Service</p>
+                <p>Multiple Accounts</p>
+                <p>Management No</p>
+                <p>${this.data}</p>
+                <p>${this.needs}</p>
+                <a href="#" class="card_button">${this.btn}</a>
+            `;
+            this.parent.append(elem);
+        }
+    }
+
+    new pricingCard (
+        "Starter",
+        "FREE",
+        "--",
+        "--",
+        "Try",
+        ".pricing_cards .cards_wrap"
+    ).render();
+
+    new pricingCardPopular (
+        "Business",
+        "$97",
+        "Unlimited Data",
+        "--",
+        "Sign Up",
+        ".pricing_cards .cards_wrap"
+    ).render();
+    
+    new pricingCard (
+        "Professional",
+        "$297",
+        "Unlimited Data",
+        "Whatever You Need",
+        "Sign Up",
+        ".pricing_cards .cards_wrap",
+    ).render();
     
 });
 
