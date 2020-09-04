@@ -34,7 +34,7 @@ $(document).ready( function() {
 
         //Close modal by click on ESC key
         $(document).on('keydown', function(e){
-            if (e.code === 'Escape') {
+            if (e.key === 'Escape') {
                 modalClose();
             }
         });
