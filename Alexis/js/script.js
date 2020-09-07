@@ -115,28 +115,28 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     new focusCard (
-        "../img/web.svg",
+        "img/web.svg",
         "picture_1",
         "Web Design",
         "Analytics release series A financing launch party interaction design android angel investor.",
         ".container .ourFocus__Cards"
     ).render();
     new focusCard (
-        "../img/design.svg",
+        "img/design.svg",
         "picture_2",
         "UX Design",
         "Analytics release series A financing launch party interaction design android angel investor.",
         ".container .ourFocus__Cards"
     ).render();
     new focusCard (
-        "../img/photo.svg",
+        "img/photo.svg",
         "picture_3",
         "Photogrpahy",
         "Analytics release series A financing launch party interaction design android angel investor.",
         ".container .ourFocus__Cards"
     ).render();
     new focusCard (
-        "../img/app.svg",
+        "img/app.svg",
         "picture_4",
         "App Development",
         "Analytics release series A financing launch party interaction design android angel investor.",

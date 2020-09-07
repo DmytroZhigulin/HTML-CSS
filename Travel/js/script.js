@@ -144,7 +144,7 @@ window.addEventListener('DOMContentLoaded', () => {
         "$97",
         "Unlimited Data",
         "--",
-        "Sign Up",
+        "Try",
         ".pricing_cards .cards_wrap"
     ).render();
     
@@ -153,7 +153,7 @@ window.addEventListener('DOMContentLoaded', () => {
         "$297",
         "Unlimited Data",
         "Whatever You Need",
-        "Sign Up",
+        "Try",
         ".pricing_cards .cards_wrap",
     ).render();
     
