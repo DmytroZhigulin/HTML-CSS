@@ -634,7 +634,7 @@ footer {
         }
         
         .menu_wrap {
-            width: 40px;
+            width: 50px;
             background-color: black;
             height: 5px;
             position: relative;
@@ -655,7 +655,7 @@ footer {
             content: '';
             position: absolute;
             top: -11px;
-            width: 40px;
+            width: 50px;
             background-color: black;
             height: 5px;
         }
@@ -664,7 +664,7 @@ footer {
             content: '';
             position: absolute;
             top: 11px;
-            width: 40px;
+            width: 50px;
             background-color: black;
             height: 5px;
         } 
@@ -726,6 +726,9 @@ footer {
     .bottom {
         margin-left: 0;
     }
+    .button {
+        margin-top: 15px;
+    }
 
     .footer {
         display: none;
@@ -735,8 +738,6 @@ footer {
     }
 
 }
-
-
 /* Fixes for 768px resolution */
 
 @media (max-device-width:768px) {
@@ -775,12 +776,12 @@ footer {
         transform: none;
     }
 }
-
-
 /* Fixes for 512px resolution */
 
 @media (max-device-width:512px) {
-    
+    .title {
+        font-size: 90px;
+    }
     .title_wrap {
         font-size: 40px;
     }
