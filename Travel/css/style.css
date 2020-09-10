@@ -241,7 +241,7 @@ body {
     font-weight: 400;
     line-height: 28px;
     letter-spacing: -0.4px;
-    text-align: center;
+    text-align: center; 
 }
 .card_text {
     margin-top: 45px; 
@@ -588,6 +588,9 @@ footer {
         position: absolute;
         display: flex;
     }
+    .card_s {
+        font-size: 25px;
+    }
     .pricing {
         position: static;
         padding-bottom: 10px;
@@ -708,7 +711,7 @@ footer {
         margin-bottom: 50px;
     }
     .card_s {
-        width: auto;
+        max-width: 35%;
         margin-top: 20px;
         margin: 0 auto;
         
@@ -761,11 +764,6 @@ footer {
         font-size: 65px;
         width: auto;
         line-height: unset;
-    }
-
-    .card_s {
-        margin: 0 auto;
-        max-width: 35%;
     }
 
     .card_text {
