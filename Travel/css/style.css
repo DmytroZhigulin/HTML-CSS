@@ -622,7 +622,7 @@ footer {
 
           /* Burger menu style */
 
-          .main_menu {
+        .main_menu {
             display: none;
         }
 
@@ -636,14 +636,14 @@ footer {
         .menu_wrap {
             width: 40px;
             background-color: black;
-            height: 3px;
+            height: 5px;
             position: relative;
             list-style: none;
 
         }
 
         .burger_menu {
-            display: flex;
+            display: none;
             flex-direction: column;
             position: absolute;
             top: 32px;
@@ -654,19 +654,19 @@ footer {
         .menu_wrap::before {
             content: '';
             position: absolute;
-            top: -10px;
+            top: -11px;
             width: 40px;
             background-color: black;
-            height: 3px;
+            height: 5px;
         }
         
         .menu_wrap::after {
             content: '';
             position: absolute;
-            top: 10px;
+            top: 11px;
             width: 40px;
             background-color: black;
-            height: 3px;
+            height: 5px;
         } 
 
         .form_button {
