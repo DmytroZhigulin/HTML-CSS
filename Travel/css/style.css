@@ -563,7 +563,7 @@ footer {
     }
     .logo {
         width: 210px;
-        height: 95px;
+        height: 100px;
     }
 
     .bottom_wrap {
@@ -671,7 +671,6 @@ footer {
             overflow:hidden;
             background-color:#d03958;
             text-align: center;
-            
         }
 
         
