@@ -706,6 +706,7 @@ footer {
         width: auto;
         margin-top: 20px;
         margin: 0 auto;
+        
     }
 
     .pricing_card {
@@ -758,7 +759,7 @@ footer {
 
     .card_s {
         margin: 0 auto;
-        width: auto;
+        max-width: 35%;
     }
 
     .card_text {
