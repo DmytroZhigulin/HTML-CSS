@@ -2,6 +2,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'PT Serif', serif;
 }
+li {
+    list-style: none;
+}
 .container {
     max-width: 1010px;
     margin: 0 auto;
@@ -41,7 +44,7 @@ body {
 }
 .main_menu {
     display: flex;
-    list-style: none;
+    margin-top: 30px;
 }
 
 .burger_menu_wrap {
