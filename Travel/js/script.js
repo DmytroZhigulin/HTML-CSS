@@ -9,13 +9,14 @@ window.addEventListener('DOMContentLoaded', () => {
     formCheckbox = headerForm.querySelector('[type="checkbox"]'),
     formButton = headerForm.querySelector('.form_button'),
     burgerMenuShow = document.querySelector('.burger_menu_wrap'),
-    burgerMenuList = document.querySelector('.burger_menu');
+    burgerMenuList = document.querySelector('.burger_menu'),
+    burgerMenuTitles = burgerMenuList.querySelectorAll('li');
 
     // console.log(headerForm);
     // console.log(inputField);
     // console.log(formCheckbox);
     // console.log(formButton);
-    
+    console.log(burgerMenuTitles);
 
     //функция события 'клик' на основном меню
     function mainMenuFunc(menu) {
@@ -37,6 +38,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
         burgerMenuShow.addEventListener('click', (e) => {
             burgerMenuList.style.display = 'flex';
+
+            burgerMenuTitles.forEach(item => {
+                item.classList.add('animated');
+            });
         });
     }
     burgerShow();
