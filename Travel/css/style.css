@@ -205,6 +205,7 @@ body {
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 70px;
+    flex-wrap: wrap;
 }
 .card_icon_1 {
     background-image: url(../picture/heart.png);
@@ -233,7 +234,7 @@ body {
    
 }
 .card_s {
-    width: 168px;
+    max-width: 168px;
     color: #161616;
     font-family: 'PT Serif', serif;
     font-size: 20px;
@@ -544,7 +545,7 @@ footer {
 
 /* styles for 1024px resolution */
 
-@media (max-width:1024px) {
+@media (max-device-width:1024px) {
     
     .container {
         max-width: 90%;
@@ -696,21 +697,11 @@ footer {
 
     /* styles for 890px resolution */
 }
-@media (max-width:890px) {
-
-    .container {
-        max-width: 90%;
-        margin: 0 auto;
-    }
+@media (max-device-width:890px) {
 
     .title_wrap {
         margin-bottom: 50px;
     }
-
-    .service_cards {
-        flex-wrap: wrap;
-    }
-
     .card_s {
         width: auto;
         margin-top: 20px;
@@ -747,12 +738,7 @@ footer {
 
 /* Fixes for 768px resolution */
 
-@media (max-width:768px) {
-
-    .container {
-        max-width: 90%;
-        margin: 0 auto;
-    }
+@media (max-device-width:768px) {
 
     .pricing_title_wrap {
         margin-bottom: 20px;
@@ -792,12 +778,7 @@ footer {
 
 /* Fixes for 512px resolution */
 
-@media (max-width:512px) {
-
-    .container {
-        max-width: 90%;
-        margin: 0 auto;
-    }
+@media (max-device-width:512px) {
     
     .title_wrap {
         font-size: 40px;
