@@ -327,6 +327,7 @@ body {
     cursor: pointer;
     width: 315px;
     background-color: #ffffff;
+    box-shadow: 5px 4px 10px gray;
     color: #161616;
     font-family: 'PT Serif', serif;
     font-size: 20px;
@@ -604,6 +605,10 @@ footer {
         display: flex;
         justify-content: space-between;
         position: static;
+    }
+
+    .pre_footer {
+        margin-top: 40px;
     }
 
     .testimonial_gallery {
