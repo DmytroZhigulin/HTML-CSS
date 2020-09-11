@@ -80,12 +80,12 @@ li {
     transform: translateY(1rem) rotate(45deg);
 }
 #toggle:checked ~ .hamburger-menu .line::after {
-    transform: translateY(-0.9rem) rotate(-45deg);
+    transform: translateY(-1rem) rotate(-45deg);
 }
 .hamburger-menu {
-    width: 3rem;
+    width: 4rem;
     position: absolute;
-    top: 2rem;
+    top: 3rem;
     right: 2rem;
     cursor: pointer;
     z-index: 9;
@@ -98,7 +98,7 @@ li {
     content: "";
     display: block;
     background-color: black;
-    height: 4px;
+    height: 7px;
     transition: all .2s;
 }
 .line::before {
@@ -123,13 +123,13 @@ li {
     transform: scale(1);
 }
 .nav-item {
-    line-height: 2;
+    line-height: 3;
 }
 .nav-link {
     text-transform: uppercase;
     text-decoration: none;
     color: black;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     transition: .5s;
