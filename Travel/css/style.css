@@ -127,13 +127,13 @@ li {
     margin: auto;
 }
 .nav-item {
-    line-height: 3;
+    line-height: 2;
 }
 .nav-link {
     text-transform: uppercase;
     text-decoration: none;
     color: black;
-    font-size: calc(3rem + 4 * (100vw / 1024));
+    font-size: 3rem;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     transition: .5s;
@@ -143,8 +143,6 @@ li {
 }
 
 /* -------- */
-
-
 
 
 .bottom_wrap {
@@ -812,7 +810,13 @@ footer {
     .ava-2 {
         display: none;
     }
-
+    .nav-item {
+        line-height: 3;
+    }
+    .nav-link {
+        
+        font-size: 5rem;
+    }
     
 }
 
