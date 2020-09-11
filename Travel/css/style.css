@@ -46,12 +46,6 @@ li {
     display: flex;
     margin-top: 30px;
 }
-
-.burger_menu_wrap {
-    display: none;
-}
-
-
 .main_link{
     text-decoration: none;
     color: #1b1b1b;
@@ -73,6 +67,81 @@ li {
     text-shadow: 3px 3px 3px #d03958;
     outline: none
 }
+
+/* Burger menu style */
+.adaptive-menu {
+    display: none;
+}
+#toggle {
+    display: none;
+}
+#toggle:checked ~ .hamburger-menu .line::before {
+    box-shadow: 0 0 0 black;
+    transform: translateY(1rem) rotate(45deg);
+}
+#toggle:checked ~ .hamburger-menu .line::after {
+    transform: translateY(-0.9rem) rotate(-45deg);
+}
+.hamburger-menu {
+    width: 3rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 9;
+}
+.line {
+    display: block;
+}
+.line::before,
+.line::after {
+    content: "";
+    display: block;
+    background-color: black;
+    height: 4px;
+    transition: all .2s;
+}
+.line::before {
+    margin-bottom: 1.6rem;
+    box-shadow: 0 1rem 0 black;
+}
+.nav {
+    height: 100%;
+    background-color: #d03958;
+    width: 100%;
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+    text-align: center;
+}
+#toggle:checked ~ .nav {
+    opacity: 1;
+    transform: scale(1);
+}
+.nav-item {
+    line-height: 2;
+}
+.nav-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: .5s;
+}
+.nav-link:hover {
+    color: #fff;
+}
+/* -------- */
+
+
+
+
 .bottom_wrap {
     display: flex;
     justify-content: space-between;
@@ -130,6 +199,7 @@ li {
     outline: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.5s;
 }
 .form_button:hover{
     background-color: white;
@@ -575,7 +645,10 @@ footer {
     }
 
     .main_menu {
-        margin-top: 20px;
+        display: none;
+    }
+    .adaptive-menu {
+        display: block;
     }
 
     .header_form {
@@ -634,91 +707,6 @@ footer {
     .bottom {
         margin-left: 45%;
     }
-
-
-
-          /* Burger menu style */
-
-        .main_menu {
-            display: none;
-        }
-
-        .burger_menu_wrap {
-            display: block;
-            cursor: pointer;
-            padding: 15px 0px;
-            margin-top: 30px;
-        }
-        
-        .menu_wrap {
-            width: 70px;
-            background-color: black;
-            height: 6px;
-            position: relative;
-            list-style: none;
-
-        }
-
-        .burger_menu {
-            display: none;
-            flex-direction: column;
-            position:fixed;
-            top:0;
-            left:0;
-            z-index: 99;
-            width: 100%;
-            height:100%;
-            overflow:hidden;
-            background-color:#d03958;
-            text-align: center;
-        }
-
-        
-        .menu_wrap::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            width: 70px;
-            background-color: black;
-            height: 6px;
-        }
-        
-        .menu_wrap::after {
-            content: '';
-            position: absolute;
-            top: 15px;
-            width: 70px;
-            background-color: black;
-            height: 6px;
-        } 
-
-        .form_button {
-            width: 240px;
-        }
-        .form_button:hover {
-            transition: 0.5s;
-        }
-
-        .main_link {
-            width: 100%;
-            display: inline-block;
-            color: white;
-            border-bottom: 1px solid #d03958;
-            padding: 0;
-            font-size: 60px;
-            margin-top: 85px;
-        }
-
-        .main_link:hover {
-            background-color: transparent;
-            border-radius: 0;
-        }
-
-
-        .burger_menuClose {
-            display: none;
-        }
-
 
     /* styles for 890px resolution */
 }
@@ -822,6 +810,9 @@ footer {
 
     
 }
+
+
+
 
 
 

@@ -7,16 +7,14 @@ window.addEventListener('DOMContentLoaded', () => {
     headerForm = document.querySelector('.header_form'),
     inputField = headerForm.querySelectorAll('.text_field'),
     formCheckbox = headerForm.querySelector('[type="checkbox"]'),
-    formButton = headerForm.querySelector('.form_button'),
-    burgerMenuShow = document.querySelector('.burger_menu_wrap'),
-    burgerMenuList = document.querySelector('.burger_menu'),
-    burgerMenuTitles = burgerMenuList.querySelectorAll('li');
+    formButton = headerForm.querySelector('.form_button');
+    ;
 
     // console.log(headerForm);
     // console.log(inputField);
     // console.log(formCheckbox);
     // console.log(formButton);
-    console.log(burgerMenuTitles);
+    
 
     //функция события 'клик' на основном меню
     function mainMenuFunc(menu) {
@@ -32,19 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     }
     mainMenuFunc(mainMenu);
-
-    //функция вызова и скрытия бургер меню
-    function burgerShow() {
-
-        burgerMenuShow.addEventListener('click', (e) => {
-            burgerMenuList.style.display = 'flex';
-
-            burgerMenuTitles.forEach(item => {
-                item.classList.add('animated');
-            });
-        });
-    }
-    burgerShow();
 
 
 
