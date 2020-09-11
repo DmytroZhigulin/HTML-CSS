@@ -7,27 +7,34 @@ window.addEventListener('DOMContentLoaded', () => {
     headerForm = document.querySelector('.header_form'),
     inputField = headerForm.querySelectorAll('.text_field'),
     formCheckbox = headerForm.querySelector('[type="checkbox"]'),
-    formButton = headerForm.querySelector('.form_button');
-    ;
+    formButton = headerForm.querySelector('.form_button'),
+    hamburgerButton = document.querySelector('.menu_icon__wrap'),
+    hamburgerMenuWindow = document.querySelector('.nav');
 
-    // console.log(headerForm);
-    // console.log(inputField);
-    // console.log(formCheckbox);
-    // console.log(formButton);
+   
+
+    hamburgerButton.addEventListener('click', (e) => {
+
+        const line = document.querySelector('.menu_icon');
+        line.classList.toggle('active');
+        hamburgerMenuWindow.classList.toggle('nav-active');
+        document.body.style.overflow = 'hidden';
+
+    });
     
 
     //функция события 'клик' на основном меню
     function mainMenuFunc(menu) {
 
-    menu.forEach((item, index) => {
+        menu.forEach((item, index) => {
 
-        // console.log(index);
-        // console.log(item);
-        item.addEventListener('click', (event) => {
-            event.preventDefault();
-            console.log(`clicked on ${index + 1}`);
+            // console.log(index);
+            // console.log(item);
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+                console.log(`clicked on ${index + 1}`);
+            });
         });
-    });
     }
     mainMenuFunc(mainMenu);
 
@@ -36,33 +43,33 @@ window.addEventListener('DOMContentLoaded', () => {
     //функция проверки корректного заполнения формы хедера
     function formCheck(form) {
 
-    formButton.addEventListener('click', (e) => {
+        formButton.addEventListener('click', (e) => {
 
-        e.preventDefault();
-        if (formCheckbox.checked === true) {
+            e.preventDefault();
+            if (formCheckbox.checked === true) {
 
-            let userInfo = [];
+                let userInfo = [];
 
-            inputField.forEach((item, index) => {
-                
-                if ( item.value != '' && item.value != null) {
+                inputField.forEach((item, index) => {
+                    
+                    if ( item.value != '' && item.value != null) {
 
-                    userInfo.push(item.value);
-                    console.log(`done on ${index}`);
+                        userInfo.push(item.value);
+                        console.log(`done on ${index}`);
 
-                } else {
-                    console.log(`err on ${index}`);
-                    alert("All fields must be filled");
-                }
-            });
-    
-            console.log(userInfo);
+                    } else {
+                        console.log(`err on ${index}`);
+                        alert("All fields must be filled");
+                    }
+                });
+        
+                console.log(userInfo);
 
-        } else {
-            alert('You must read and accept the terms & conditions');
-        }
-        form.reset();
-    });
+            } else {
+                alert('You must read and accept the terms & conditions');
+            }
+            form.reset();
+        });
     }
     formCheck(headerForm);
 

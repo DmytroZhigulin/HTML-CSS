@@ -69,44 +69,43 @@ li {
 }
 
 /* Burger menu style */
-.adaptive-menu {
-    display: none;
-}
-#toggle {
-    display: none;
-}
-#toggle:checked ~ .hamburger-menu .line::before {
-    box-shadow: 0 0 0 black;
-    transform: translateY(1rem) rotate(45deg);
-}
-#toggle:checked ~ .hamburger-menu .line::after {
-    transform: translateY(-1rem) rotate(-45deg);
-}
-.hamburger-menu {
-    width: 4rem;
-    position: fixed;
-    top: 3rem;
-    right: 2rem;
+.menu_icon__wrap {
     cursor: pointer;
+    height: 39px;
     z-index: 9;
+    margin: 2rem 1rem 0 0;
+    display: none;
 }
-.line {
-    display: block;
+.menu_icon {
+    width: 4rem;
+    height: 7px;
+    background-color: black;
+    transition: .1s;
 }
-.line::before,
-.line::after {
+.menu_icon::before,
+.menu_icon::after {
     content: "";
     display: block;
     background-color: black;
     height: 7px;
     transition: all .2s;
 }
-.line::before {
+.menu_icon::before {
     margin-bottom: 1.6rem;
     box-shadow: 0 1rem 0 black;
 }
+.menu_icon.active {
+    background-color: transparent;
+}
+.menu_icon.active::before {
+    box-shadow: 0 0 0 black;
+    transform: translateY(1rem) rotate(45deg);
+}
+.menu_icon.active::after {
+    transform: translateY(-1rem) rotate(-45deg);
+}
 .nav {
-    display: flex;
+    display: none;
     height: 100%;
     background-color: #d03958;
     width: 100%;
@@ -116,10 +115,11 @@ li {
     left: 0;
     opacity: 0;
     transform: scale(0);
-    transition: opacity .5s;
+    transition: opacity 1s;
     text-align: center;
 }
-#toggle:checked ~ .nav {
+.nav-active {
+    display: flex;
     opacity: 1;
     transform: scale(1);
 }
@@ -141,6 +141,7 @@ li {
 .nav-link:hover {
     color: #fff;
 }
+
 /* -------- */
 
 
@@ -639,6 +640,10 @@ footer {
         width: 210px;
         height: 100px;
     }
+    .menu_icon__wrap {
+        display: block;
+    }
+    
 
     .bottom_wrap {
         flex-direction: column;
@@ -651,10 +656,6 @@ footer {
     .main_menu {
         display: none;
     }
-    .adaptive-menu {
-        display: block;
-    }
-
     .header_form {
         display: none;
     }
