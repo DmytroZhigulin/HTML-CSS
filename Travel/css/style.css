@@ -84,7 +84,7 @@ li {
 }
 .hamburger-menu {
     width: 4rem;
-    position: absolute;
+    position: fixed;
     top: 3rem;
     right: 2rem;
     cursor: pointer;
@@ -106,6 +106,7 @@ li {
     box-shadow: 0 1rem 0 black;
 }
 .nav {
+    display: flex;
     height: 100%;
     background-color: #d03958;
     width: 100%;
@@ -122,6 +123,9 @@ li {
     opacity: 1;
     transform: scale(1);
 }
+.nav-list {
+    margin: auto;
+}
 .nav-item {
     line-height: 3;
 }
@@ -129,7 +133,7 @@ li {
     text-transform: uppercase;
     text-decoration: none;
     color: black;
-    font-size: 5rem;
+    font-size: calc(3rem + 4 * (100vw / 1024));
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     transition: .5s;
