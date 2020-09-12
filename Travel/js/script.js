@@ -4,12 +4,12 @@
 window.addEventListener('DOMContentLoaded', () => {
 
     const mainMenu = document.querySelectorAll('.main_menu .main_link'),
-    headerForm = document.querySelector('.header_form'),
-    inputField = headerForm.querySelectorAll('.text_field'),
-    formCheckbox = headerForm.querySelector('[type="checkbox"]'),
-    formButton = headerForm.querySelector('.form_button'),
-    hamburgerButton = document.querySelector('.menu_icon__wrap'),
-    hamburgerMenuWindow = document.querySelector('.nav');
+          headerForm = document.querySelector('.header_form'),
+          inputField = headerForm.querySelectorAll('.text_field'),
+          formCheckbox = headerForm.querySelector('[type="checkbox"]'),
+          formButton = headerForm.querySelector('.form_button'),
+          hamburgerButton = document.querySelector('.menu_icon__wrap'),
+          hamburgerMenuWindow = document.querySelector('.nav');
 
    
     //события на кнопке бургер меню
@@ -27,9 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
     function mainMenuFunc(menu) {
 
         menu.forEach((item, index) => {
-
-            // console.log(index);
-            // console.log(item);
             item.addEventListener('click', (event) => {
                 event.preventDefault();
                 console.log(`clicked on ${index + 1}`);
@@ -42,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //функция проверки корректного заполнения формы хедера
     function formCheck(form) {
-
+        //Переделать функцию. Передавать в нее тэг Form, проверять все инпуты и чекбоксы
         formButton.addEventListener('click', (e) => {
 
             e.preventDefault();
