@@ -168,7 +168,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //анимация
     const animItems = document.querySelectorAll('.animated');
-    console.log(animItems);
+   
+    const yOffset = window.pageYOffset,
+          xOffset = window.pageXOffset;
 
     if (animItems.length > 0) {
         window.addEventListener('scroll', animScrol);
@@ -178,7 +180,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const animHeight = animItem.offsetHeight;
                 const animItemOffset = offset(animItem).top;
                 const animStart = 4;
-                // const yOffset = window.pageYOffset;
+                
 
                 let animItemPoint = window.innerHeight - animHeight/animStart;
 
@@ -186,7 +188,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     animItemPoint = window.innerHeight - window.innerHeight/animStart;
                 }
 
-                if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animHeight)) {
+                if ((yOffset > animItemOffset - animItemPoint) && yOffset < (animItemOffset + animHeight)) {
                     animItem.classList.add('anim');
                 } else {
                     animItem.classList.add('anim');
@@ -196,8 +198,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         function offset(el) {
             const rect = el.getBoundingClientRect();
-                let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                let scrollLeft = xOffset || document.documentElement.scrollLeft;
+                let scrollTop = yOffset || document.documentElement.scrollTop;
             return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
         }
         animScrol();
