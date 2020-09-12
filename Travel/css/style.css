@@ -157,16 +157,33 @@ li {
     line-height: 80px;
     padding-bottom: 160px;
     width: 495px;
+    
 }
-.title_1 {
+.title_top {
     color: #d03958;
     text-transform: uppercase;
     letter-spacing: -1.8px;
+
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
 }
-.title_2 {
+.title_top.anim {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.title_bottom {
     color: #161616;
     letter-spacing: -1.8px;
     text-transform: uppercase;
+
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.title_bottom.anim {
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 .header_main_text {
     color: #161616;
@@ -624,7 +641,7 @@ footer {
 
 /* styles for 1024px resolution */
 
-@media (max-device-width:1024px) {
+@media screen and (max-device-width:1024px) {
     
     .container {
         max-width: 90%;
@@ -713,7 +730,7 @@ footer {
 
     /* styles for 890px resolution */
 }
-@media (max-device-width:890px) {
+@media screen and (max-device-width:890px) {
 
     .title_wrap {
         margin-bottom: 50px;
@@ -756,7 +773,7 @@ footer {
 }
 /* Fixes for 768px resolution */
 
-@media (max-device-width:768px) {
+@media screen and (max-device-width:768px) {
 
     .pricing_title_wrap {
         margin-bottom: 20px;
@@ -789,7 +806,7 @@ footer {
 }
 /* Fixes for 512px resolution */
 
-@media (max-device-width:512px) {
+@media screen and (max-device-width:512px) {
     .title {
         font-size: 90px;
     }

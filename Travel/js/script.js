@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     hamburgerMenuWindow = document.querySelector('.nav');
 
    
-
+    //события на кнопке бургер меню
     hamburgerButton.addEventListener('click', (e) => {
 
         const line = document.querySelector('.menu_icon');
@@ -76,7 +76,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     //PRICING CARDS
-
     class pricingCard {
         constructor(title, tarif, data, needs, btn, parentSelector, ...classes) {
             this.title = title;
@@ -165,7 +164,44 @@ window.addEventListener('DOMContentLoaded', () => {
         "Try",
         ".pricing_cards .cards_wrap",
     ).render();
-    
+
+
+    //анимация
+    const animItems = document.querySelectorAll('.animated');
+    console.log(animItems);
+
+    if (animItems.length > 0) {
+        window.addEventListener('scroll', animScrol);
+        function animScrol(params) {
+            for (let i = 0; i < animItems.length; i++) {
+                let animItem = animItems[i];
+                const animHeight = animItem.offsetHeight;
+                const animItemOffset = offset(animItem).top;
+                const animStart = 4;
+                // const yOffset = window.pageYOffset;
+
+                let animItemPoint = window.innerHeight - animHeight/animStart;
+
+                if (animHeight > window.innerHeight) {
+                    animItemPoint = window.innerHeight - window.innerHeight/animStart;
+                }
+
+                if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animHeight)) {
+                    animItem.classList.add('anim');
+                } else {
+                    animItem.classList.add('anim');
+                }
+            }
+        }
+
+        function offset(el) {
+            const rect = el.getBoundingClientRect();
+                let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+        }
+        animScrol();
+    }
 });
 
 
