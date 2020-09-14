@@ -233,6 +233,16 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         animScrol();
     }
+
+
+    //отключение свайпа (тест)
+    const elem = document.getElementsByTagName("container");
+
+    var defaultPrevent=function(e){e.preventDefault();};
+    elem.addEventListener("touchstart", defaultPrevent);
+    elem.addEventListener("touchmove" , defaultPrevent);
+ 
+
 });
 
 
