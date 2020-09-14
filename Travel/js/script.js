@@ -20,6 +20,15 @@ window.addEventListener('DOMContentLoaded', () => {
         hamburgerMenuWindow.classList.toggle('nav-active');
         document.body.style.overflow = 'hidden';
 
+        //отключение свайпа (тест)
+        const elem = document.getElementsByTagName("container");
+
+        var defaultPrevent = function(e) { 
+            e.preventDefault();
+        };
+        elem.addEventListener("touchstart", defaultPrevent);
+        elem.addEventListener("touchmove" , defaultPrevent);
+
     });
     
 
@@ -235,12 +244,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    //отключение свайпа (тест)
-    const elem = document.getElementsByTagName("container");
-
-    var defaultPrevent=function(e){e.preventDefault();};
-    elem.addEventListener("touchstart", defaultPrevent);
-    elem.addEventListener("touchmove" , defaultPrevent);
+    
  
 
 });
