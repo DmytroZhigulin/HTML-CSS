@@ -12,6 +12,17 @@ window.addEventListener('DOMContentLoaded', () => {
           hamburgerMenuWindow = document.querySelector('.nav');
 
    
+    //отключение свайпа (тест)
+    const elem = document.querySelectorAll('.nav-active');
+
+    var defaultPrevent = function(e) { 
+        e.preventDefault();
+    };
+    elem.forEach( item => {
+        item.addEventListener("touchstart", defaultPrevent);
+        item.addEventListener("touchmove" , defaultPrevent);
+    });
+
     //события на кнопке бургер меню
     hamburgerButton.addEventListener('click', (e) => {
 
@@ -19,19 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
         line.classList.toggle('active');
         hamburgerMenuWindow.classList.toggle('nav-active');
         document.body.style.overflow = 'hidden';
-
-        //отключение свайпа (тест)
-        const elem = document.querySelectorAll('.nav-active');
-
-        var defaultPrevent = function(e) { 
-            e.preventDefault();
-        };
-        elem.forEach( item => {
-            item.addEventListener("touchstart", defaultPrevent);
-            item.addEventListener("touchmove" , defaultPrevent);
-        })
-        
-
     });
     
 
