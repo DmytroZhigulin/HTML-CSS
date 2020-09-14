@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
 
         //отключение свайпа (тест)
-        const elem = document.querySelectorAll('.container');
+        const elem = document.querySelectorAll('.nav-active');
 
         var defaultPrevent = function(e) { 
             e.preventDefault();
