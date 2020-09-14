@@ -354,7 +354,7 @@ li {
     justify-content: space-between;
     padding: 15px 0; 
 }
-.button {
+.story_button {
     width: 269px;
     height: 64px;
     background-color: #e3d5b8;
@@ -369,6 +369,11 @@ li {
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+    transition: .5s;
+}
+.story_button:hover {
+    background-color: rgb(255, 253, 253);
+    color: #d03958;
 }
 .story_button:focus{
     border: 1px solid black;
@@ -418,9 +423,10 @@ li {
 .pricing_card {
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
     align-items: center;
     cursor: pointer;
-    width: 315px;
+    max-width: 315px;
     background-color: #ffffff;
     box-shadow: 5px 4px 10px gray;
     color: #161616;
@@ -435,6 +441,12 @@ li {
 
 .pricing_card:hover {
     transform: scale(1.2);  
+}
+.descr_fields {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: center;
 }
 .wrap {
     position: relative;
@@ -759,7 +771,7 @@ footer {
     .bottom {
         margin-left: 0;
     }
-    .button {
+    .story_button {
         margin-top: 15px;
     }
 

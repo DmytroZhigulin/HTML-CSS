@@ -97,11 +97,15 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.innerHTML = `
                 <h4 class="pricing_c_title">${this.title}</h4>
                 <h3 class="pricing_c_tarif">${this.tarif}</h3>
-                <p>Free Service</p>
-                <p>Multiple Accounts</p>
-                <p>Management No</p>
-                <p>${this.data}</p>
-                <p>${this.needs}</p>
+
+                <div class="descr_fields">
+                    <p>Free Service</p>
+                    <p>Multiple Accounts</p>
+                    <p>Management No</p>
+                    <p>${this.data}</p>
+                    <p>${this.needs}</p>
+                </div>
+                
                 <a href="#" class="card_button">${this.btn}</a>
             `;
             this.parent.append(elem);
@@ -124,11 +128,15 @@ window.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <h4 class="pricing_c_title">${this.title}</h4>
                 <h3 class="pricing_c_tarif">${this.tarif}</h3>
-                <p>Free Service</p>
-                <p>Multiple Accounts</p>
-                <p>Management No</p>
-                <p>${this.data}</p>
-                <p>${this.needs}</p>
+
+                <div class="descr_fields">
+                    <p>Free Service</p>
+                    <p>Multiple Accounts</p>
+                    <p>Management No</p>
+                    <p>${this.data}</p>
+                    <p>${this.needs}</p>
+                </div>
+                
                 <a href="#" class="card_button">${this.btn}</a>
             `;
             this.parent.append(elem);
