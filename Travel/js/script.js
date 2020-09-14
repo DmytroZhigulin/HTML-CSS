@@ -75,10 +75,10 @@ window.addEventListener('DOMContentLoaded', () => {
     function adaptiveFormCall() {
 
         const formCallButton = document.querySelector('.request');
-        console.log(formCallButton);
+    
         formCallButton.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log('1');
+    
             const formBgWindow = document.createElement('div');
             formBgWindow.classList.add('form_bg');
             headerForm.classList.remove('header_form');
