@@ -21,13 +21,16 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
 
         //отключение свайпа (тест)
-        const elem = document.getElementsByTagName("container");
+        const elem = document.querySelectorAll('.container');
 
         var defaultPrevent = function(e) { 
             e.preventDefault();
         };
-        elem.addEventListener("touchstart", defaultPrevent);
-        elem.addEventListener("touchmove" , defaultPrevent);
+        elem.forEach( item => {
+            item.addEventListener("touchstart", defaultPrevent);
+            item.addEventListener("touchmove" , defaultPrevent);
+        })
+        
 
     });
     
