@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const line = document.querySelector('.menu_icon');
         line.classList.toggle('active');
         hamburgerMenuWindow.classList.toggle('nav-active');
-        
+
         //отключение свайпа (тест)
         const elem = document.querySelectorAll('.nav-active');
 
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         
-        // document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
     });
     
 
