@@ -24,14 +24,16 @@ window.addEventListener('DOMContentLoaded', () => {
         
 
     // Main Menu
-    mainMenu.forEach( item => {
-
-        item.addEventListener('click', (e) => {
-            console.log('click');
+    //Плавная прокрутка страницы по якорям
+    $('a.nav-link').click(function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top + "px"
+        }, {
+            duration: 2000,
+            easing: "swing"
         });
+        return false;
     });
-
-
     btn.addEventListener('click', (event) => {
         console.log('OK');
     });
@@ -39,6 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
     playBtn.addEventListener('click', (event) => {
         console.log('Running video');
     });
+
+    
     
     // Описание карточек блока OUR TEAM
     function cardDefault() {

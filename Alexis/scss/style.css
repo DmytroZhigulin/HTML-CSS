@@ -345,6 +345,8 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 150px;
 }
 
@@ -362,12 +364,15 @@ a {
 
 .ourFocus__card {
   max-width: 260px;
+  margin: 0 auto;
   background-color: #ffffff;
   text-align: center;
   -webkit-box-shadow: 10px 15px 5px #edebeb;
           box-shadow: 10px 15px 5px #edebeb;
   cursor: pointer;
   border-bottom: 2px solid #fc5f45;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .ourFocus__card img {
@@ -388,8 +393,6 @@ a {
 }
 
 .ourFocus__card:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }

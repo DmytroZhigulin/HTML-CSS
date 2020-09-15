@@ -323,6 +323,7 @@ a {
     &__Cards {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding-bottom: 150px;
 
 
@@ -339,11 +340,13 @@ a {
     }
     &__card {
         max-width: 260px;
+        margin: 0 auto;
         background-color: #ffffff;
         text-align: center;
         box-shadow: 10px 15px 5px #edebeb;
         cursor: pointer;
         border-bottom: 2px solid #fc5f45;
+        transition: .5s;
         
 
         img {
@@ -364,7 +367,6 @@ a {
         }
 
         &:hover {
-            transition: 0.5s;
             transform: scale(1.2);
         }
         
