@@ -4,13 +4,12 @@
 window.addEventListener('DOMContentLoaded', () => {
 
 
-    const mainMenu = document.querySelectorAll('nav>a'),
-            btn = document.querySelector('button'),
-            focusCards = document.querySelectorAll('.ourFocus__card'),
-            portfolioCards = document.querySelectorAll('.portfolio__card'),
-            teamCards = document.querySelectorAll('.team__cards__card'),
-            teamDescr = document.querySelectorAll('.team_description'),
-            playBtn = document.querySelector('.videoSection__pic');
+    const btn = document.querySelector('button'),
+          focusCards = document.querySelectorAll('.ourFocus__card'),
+          portfolioCards = document.querySelectorAll('.portfolio__card'),
+          teamCards = document.querySelectorAll('.team__cards__card'),
+          teamDescr = document.querySelectorAll('.team_description'),
+          playBtn = document.querySelector('.videoSection__pic');
 
 
 
@@ -45,13 +44,14 @@ window.addEventListener('DOMContentLoaded', () => {
     
     
     // Описание карточек блока OUR TEAM
+
+    
     function cardDefault() {
-
-        teamDescr.forEach( item => {
-
-            item.classList.add('hide');
-            item.classList.remove('show', 'cardDescrA'); 
+        $('.team_description').each(function(i) {
+            $(this).addClass('hide').removeClass('show', 'cardDescrA');
+            
         });
+        
     }
     cardDefault();
     //функция по умолчанию прячет все описания карт 
