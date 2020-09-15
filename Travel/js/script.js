@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         menu.forEach((item, index) => {
             item.addEventListener('click', (event) => {
-                event.preventDefault();
+                // event.preventDefault();
                 console.log(`clicked on ${index + 1}`);
             });
         });
@@ -247,11 +247,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         animScrol();
     }
-
-
-    
- 
-
 });
 
 
